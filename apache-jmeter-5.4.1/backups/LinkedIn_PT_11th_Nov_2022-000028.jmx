@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">30</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1440205510000</longProp>
+        <longProp name="ThreadGroup.end_time">1440205510000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="false">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="variableNames">username</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="false">
+          <stringProp name="CounterConfig.start">1</stringProp>
+          <stringProp name="CounterConfig.end"></stringProp>
+          <stringProp name="CounterConfig.incr">1</stringProp>
+          <stringProp name="CounterConfig.name">loopcounter</stringProp>
+          <stringProp name="CounterConfig.format"></stringProp>
+          <boolProp name="CounterConfig.per_user">false</boolProp>
+        </CounterConfig>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+          <stringProp name="WebDriverConfig.proxy_type">AUTO_DETECT</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host">fpproxy.in.ril.com</stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">false</boolProp>
+          <stringProp name="WebDriverConfig.https_host">fpproxy.in.ril.com</stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <stringProp name="ChromeDriverConfig.chromedriver_path">C:\JMETER-1\chromedriver.exe</stringProp>
+          <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
+          <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+          <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
+          <boolProp name="ChromeDriverConfig.incognito_enabled">false</boolProp>
+          <boolProp name="ChromeDriverConfig.no_sandbox_enabled">false</boolProp>
+          <boolProp name="ChromeDriverConfig.disable_dev_shm_usage">false</boolProp>
+          <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+          <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="JioCentral-LoginPage" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.JavascriptExecutor;
+
+WDS.sampleResult.sampleStart();
+
+boolean go = true;
+//url
+
+String baseUrl = &quot;https://replicalearning.jioconnect.com/&quot;;
+WDS.browser.get(baseUrl);
+//WDS.browser.get(baseUrl + &quot;/&quot;);
+Thread.sleep(3000);
+
+//click on sign-in
+//WDS.browser.findElement(By.xpath(&quot;/html/body/div[1]/header/nav/div/div[2]/ul/li/a&quot;)).click();
+//Thread.sleep(3000);
+
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${__threadNum}-${loopcounter}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="JioCentral_Credentials" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//domain id
+WDS.browser.findElement(By.xpath(&quot;/html/body/div/div[2]/div[1]/form/input[3]&quot;)).sendKeys(new String[] {&quot;prasad.gadhave&quot;});
+Thread.sleep(1000);
+
+//password
+WDS.browser.findElement(By.xpath(&quot;/html/body/div/div[2]/div[1]/form/input[4]&quot;)).sendKeys( new String[] { &quot;nov@2022&quot; } );
+Thread.sleep(2000);
+
+//login
+WDS.browser.findElement(By.xpath(&quot;//html/body/div/div[2]/div[1]/form/input[5]&quot;)).click();
+Thread.sleep(3000);
+
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on NewCourses" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click NewCourses
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[2]/app-courses[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[2]&quot;)).click();
+
+Thread.sleep(6000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on See All" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on See All button
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;See All&apos;)]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Home Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Home link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;HOME&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Catalog Button" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on catalog button
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[1]/div[1]/div[1]/button[2]&quot;)).click();
+
+Thread.sleep(10000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Plus button" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Plus button
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[2]/app-catalog[1]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/b[1]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on My Account button" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on See All button
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[1]/div[1]/div[1]/button[3]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on_SeeAll_MyLearning_catalog" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on See All button in Mylearning in My Catalog
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[2]/app-my-account[1]/section[1]/div[1]/div[1]/div[1]/app-my-training[1]/div[1]/div[1]/div[1]/div[1]/a[1]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Home Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Home link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;HOME&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on My Account button" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on See All button
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[1]/div[1]/div[1]/button[3]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on_LinkedIn_Course_Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on LinkedIn Course Link
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[2]/app-my-account[1]/section[1]/div[1]/div[1]/div[3]/app-recommended-courses[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/span[1]/a[1]/h4[1]&quot;)).click();
+Thread.sleep(2000);
+
+//Click on Alert
+Alert alert = WDS.browser.switchTo().alert();
+// Accepting alert		
+alert.accept();	
+Thread.sleep(2000);
+
+// Switch tabs
+ArrayList tabs = new ArrayList(); // Jmeter interpreter uses &lt;String&gt; by default
+tabs.addAll(WDS.browser.getWindowHandles());
+String tab = WDS.browser.getWindowHandle();
+WDS.log.info(&quot;Tabs: &quot; + tabs + &quot; current: &quot; + tab + &quot; Size of tabs: &quot; + tabs.size());
+WDS.browser.switchTo().window(tabs.get(tabs.size() - 1));
+WDS.log.info(&quot;Tabs switched successfully&quot;);
+
+//domain id
+WDS.browser.findElement(By.xpath(&quot;/html/body/div/div[2]/div[1]/form/input[3]&quot;)).sendKeys(new String[] {&quot;jayaprakash.kunchaka&quot;});
+Thread.sleep(1000);
+
+//password
+WDS.browser.findElement(By.xpath(&quot;/html/body/div/div[2]/div[1]/form/input[4]&quot;)).sendKeys( new String[] { &quot;Krithika@123&quot; } );
+Thread.sleep(2000);
+
+//login
+WDS.browser.findElement(By.xpath(&quot;//html/body/div/div[2]/div[1]/form/input[5]&quot;)).click();
+Thread.sleep(3000);
+
+
+WDS.browser.switchTo().window(tabs.get(tabs.size() - 2));
+
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="JioCentral_Credentials" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//domain id
+WDS.browser.findElement(By.xpath(&quot;/html/body/div/div[2]/div[1]/form/input[3]&quot;)).sendKeys(new String[] {&quot;jayaprakash.kunchaka&quot;});
+Thread.sleep(1000);
+
+//password
+WDS.browser.findElement(By.xpath(&quot;/html/body/div/div[2]/div[1]/form/input[4]&quot;)).sendKeys( new String[] { &quot;Krithika@123&quot; } );
+Thread.sleep(2000);
+
+//login
+WDS.browser.findElement(By.xpath(&quot;//html/body/div/div[2]/div[1]/form/input[5]&quot;)).click();
+Thread.sleep(3000);
+
+// Switch back to main web page
+WDS.browser.switchTo().window(tabs.get(tabs.size() - 2));
+//WDS.browser.switchTo().defaultContent();
+Thread.sleep(3000);
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Home Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Home link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;HOME&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on My Account button" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on See All button
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[1]/div[1]/div[1]/button[3]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on_SeeAll_My_Suggested_Courses_Catalog" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on See All button in My Suggested courses in My Catalog
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[2]/app-my-account[1]/section[1]/div[1]/div[1]/div[3]/app-recommended-courses[1]/div[1]/div[1]/div[1]/div[1]/a[1]&quot;)).click();
+Thread.sleep(5000);
+
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Home Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Home link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;HOME&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on My Account button" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on See All button
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[1]/div[1]/div[1]/button[3]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on LMS Course Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on LMS Course Link
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[2]/app-my-account[1]/section[1]/div[1]/div[1]/div[3]/app-recommended-courses[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/a[1]/h4[1]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Home Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Home link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;HOME&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on My Account button" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on See All button
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[1]/div[1]/div[1]/button[3]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on_My_Career_Path_Catalog" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on My Career Path
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[2]/app-my-account[1]/section[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/a[1]/i[1]&quot;)).click();
+
+Thread.sleep(5000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on_My_Team_Catalog" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on My Career Path
+WDS.browser.findElement(By.xpath(&quot;/html[1]/body[1]/app-root[1]/app-home[1]/section[2]/app-my-account[1]/section[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/a[1]/i[1]&quot;)).click();
+
+Thread.sleep(5000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Home Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Home link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;HOME&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on My Status_MenuLink" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on My Status Menu Link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;MY STATUS&apos;)]&quot;)).click();
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on My Progress_Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on My progress link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;My Progress&apos;)]&quot;)).click();
+
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Home Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Home link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;HOME&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Channel Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Channel link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;CHANNELS&apos;)]&quot;)).click();
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on LinkedIn_Courses_LInk" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Channel link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;Linkedin Courses&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on LinkedIn_WedDesign_LInk" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Channel link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;Web Design&apos;)]&quot;)).click();
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="click on Home Link" enabled="true">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+
+WDS.sampleResult.sampleStart();
+//click on Home link
+WDS.browser.findElement(By.xpath(&quot;//a[contains(text(),&apos;HOME&apos;)]&quot;)).click();
+
+Thread.sleep(8000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="select partner_group" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+
+WDS.sampleResult.sampleStart();
+//group
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_groupRadio&apos;]&quot;)).click();
+Thread.sleep(1000);
+
+/*
+//Partner grp
+Robot robot = new Robot();
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//select partner grp
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+Thread.sleep(1000);
+*/
+
+/*
+//comm type
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//subject
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_subject&apos;]&quot;)).sendKeys(new String[] {&quot;new project&quot;});
+Thread.sleep(1000);
+
+//click sendpdf
+WDS.browser.findElement( By.xpath(&quot;//*[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_sendPDF&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//Click on choose file
+robot.setAutoDelay(2000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//upload pdf
+StringSelection selection = new StringSelection(&quot;C:\\Users\\jayaprakash.kunchaka\\Downloads\\SamplePDF.pdf&quot;);
+Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
+ 
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+//send
+WDS.browser.findElement(By.xpath(&quot;//button[@type=&apos;submit&apos;]&quot;)).click();
+Thread.sleep(3000);
+*/
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="select partner_group_partner" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+
+WDS.sampleResult.sampleStart();
+//group
+//WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_groupRadio&apos;]&quot;)).click();
+//Thread.sleep(1000);
+
+//Partner grp
+Robot robot = new Robot();
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+/*
+//select partner grp
+Robot robot = new Robot();
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+Thread.sleep(1000);
+*/
+
+
+/*
+//comm type
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//subject
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_subject&apos;]&quot;)).sendKeys(new String[] {&quot;new project&quot;});
+Thread.sleep(1000);
+
+//click sendpdf
+WDS.browser.findElement( By.xpath(&quot;//*[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_sendPDF&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//Click on choose file
+robot.setAutoDelay(2000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//upload pdf
+StringSelection selection = new StringSelection(&quot;C:\\Users\\jayaprakash.kunchaka\\Downloads\\SamplePDF.pdf&quot;);
+Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
+ 
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+//send
+WDS.browser.findElement(By.xpath(&quot;//button[@type=&apos;submit&apos;]&quot;)).click();
+Thread.sleep(3000);
+*/
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="select partner" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+
+WDS.sampleResult.sampleStart();
+/*
+//group
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_groupRadio&apos;]&quot;)).click();
+Thread.sleep(1000);
+
+//Partner grp
+Robot robot = new Robot();
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+*/
+
+//select partner grp
+Robot robot = new Robot();
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+Thread.sleep(1000);
+
+/*
+//comm type
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//subject
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_subject&apos;]&quot;)).sendKeys(new String[] {&quot;new project&quot;});
+Thread.sleep(1000);
+
+//click sendpdf
+WDS.browser.findElement( By.xpath(&quot;//*[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_sendPDF&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//Click on choose file
+robot.setAutoDelay(2000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//upload pdf
+StringSelection selection = new StringSelection(&quot;C:\\Users\\jayaprakash.kunchaka\\Downloads\\SamplePDF.pdf&quot;);
+Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
+ 
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+//send
+WDS.browser.findElement(By.xpath(&quot;//button[@type=&apos;submit&apos;]&quot;)).click();
+Thread.sleep(3000);
+*/
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="select_Message_Subject" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+
+WDS.sampleResult.sampleStart();
+
+/*
+//group
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_groupRadio&apos;]&quot;)).click();
+Thread.sleep(1000);
+
+//Partner grp
+Robot robot = new Robot();
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//select partner grp
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+Thread.sleep(1000);
+
+*/
+
+
+//comm type
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+Thread.sleep(1000);
+
+//subject
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_subject&apos;]&quot;)).sendKeys(new String[] {&quot;new project&quot;});
+Thread.sleep(1000);
+
+/*
+//click sendpdf
+WDS.browser.findElement( By.xpath(&quot;//*[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_sendPDF&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//Click on choose file
+robot.setAutoDelay(2000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//upload pdf
+StringSelection selection = new StringSelection(&quot;C:\\Users\\jayaprakash.kunchaka\\Downloads\\SamplePDF.pdf&quot;);
+Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
+ 
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+//send
+WDS.browser.findElement(By.xpath(&quot;//button[@type=&apos;submit&apos;]&quot;)).click();
+Thread.sleep(3000);
+*/
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Click_Send_PDF" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+
+WDS.sampleResult.sampleStart();
+/*
+//group
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_groupRadio&apos;]&quot;)).click();
+Thread.sleep(1000);
+
+//Partner grp
+Robot robot = new Robot();
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//select partner grp
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+Thread.sleep(1000);
+
+//comm type
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//subject
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_subject&apos;]&quot;)).sendKeys(new String[] {&quot;new project&quot;});
+Thread.sleep(1000);
+
+*/
+
+//click sendpdf
+WDS.browser.findElement( By.xpath(&quot;//*[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_sendPDF&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+/*
+//Click on choose file
+robot.setAutoDelay(2000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//upload pdf
+StringSelection selection = new StringSelection(&quot;C:\\Users\\jayaprakash.kunchaka\\Downloads\\SamplePDF.pdf&quot;);
+Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
+ 
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+//send
+WDS.browser.findElement(By.xpath(&quot;//button[@type=&apos;submit&apos;]&quot;)).click();
+Thread.sleep(3000);
+
+*/
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Upload_PDF" enabled="false">
+          <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+
+WDS.sampleResult.sampleStart();
+/*
+//group
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_groupRadio&apos;]&quot;)).click();
+Thread.sleep(1000);
+
+//Partner grp
+Robot robot = new Robot();
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//select partner grp
+robot.setAutoDelay(1000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+Thread.sleep(1000);
+
+//comm type
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+WDS.browser.findElement(By.xpath(&quot;//select[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_communicationType&apos;]&quot;)).click();
+Thread.sleep(2000);
+
+//subject
+WDS.browser.findElement(By.xpath(&quot;//input[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_subject&apos;]&quot;)).sendKeys(new String[] {&quot;new project&quot;});
+Thread.sleep(1000);
+
+*/
+
+/*
+//click sendpdf
+WDS.browser.findElement( By.xpath(&quot;//*[@id=&apos;_SendMessageOld_INSTANCE_Qv6Fik2RN5vM_sendPDF&apos;]&quot;)).click();
+Thread.sleep(2000);
+*/
+
+
+//Click on choose file
+Robot robot = new Robot();
+robot.setAutoDelay(2000);
+robot.keyPress(KeyEvent.VK_TAB);
+robot.keyRelease(KeyEvent.VK_TAB);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+//upload pdf
+StringSelection selection = new StringSelection(&quot;C:\\Users\\jayaprakash.kunchaka\\Downloads\\SamplePDF.pdf&quot;);
+Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
+ 
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.setAutoDelay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+//send
+WDS.browser.findElement(By.xpath(&quot;//button[@type=&apos;submit&apos;]&quot;)).click();
+Thread.sleep(3000);
+
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+          <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <boolProp name="useGroupName">true</boolProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

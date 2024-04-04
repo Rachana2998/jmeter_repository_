@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">100</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">20</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="false">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="{{base_url}}" elementType="Argument">
+              <stringProp name="Argument.name">{{base_url}}</stringProp>
+              <stringProp name="Argument.value">https://scholarshipservicessit.jio.com/scholarship-be/api/</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="authentication" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;Username&quot;: &quot;vikram.paul@ril.com&quot;,&#xd;
+    &quot;Password&quot;: &quot;Password123!&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/authentication</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="https" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="userHeaderDetails" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/userHeaderDetails</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2FA - Send OTP" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;url&quot;: &quot;https://bpmrepservices.jio.com/ScholarshipOtpVerification/Otp/Send?UserId=7C135C0E-1596-4986-9DA1-B288D828FE73&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/externalApi</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2FA - Verify OTP" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;url&quot;: &quot;https://bpmrepservices.jio.com//ScholarshipOtpVerification/Otp/Verify?UserId=7C135C0E-1596-4986-9DA1-B288D828FE73&amp;otp=123456&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/externalApi</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get My Application" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/getMyApplication</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Master Data" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;EntityType&quot;: &quot;FCO&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/getvfgi</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="User General Information" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/getugi</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="User Family Details" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/getFamilyDetails</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="User Address Details" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;PinCode&quot;: &quot;713201&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/getadsbp</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Change Password - Send OTP" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;url&quot;: &quot;https://bpmrepservices.jio.com//RFResetPasswordAPI/Home/SendOtp?UserEmail=Vikram.Paul@ril.com&amp;otpType=ChangePWD&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/externalApi</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Change Password - Verify OTP" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;url&quot;: &quot;https://bpmrepservices.jio.com//RFResetPasswordAPI/Home/ChangePassword?email=Vikram.Paul@ril.com&amp;currentPassword=Password123!&amp;newPassword=Password123!&amp;confirmPassword=Password123!&amp;otp=123456&amp;status=\&quot;\&quot;&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/externalApi</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add User Family Members" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;RelationshipType&quot;: &quot;Self&quot;,&#xd;
+  &quot;MemberName&quot;: &quot;Vikram Paul&quot;,&#xd;
+  &quot;FEID&quot;: &quot;F692F308-3E72-44E2-93D2-D1A41CC9AFCF&quot;,&#xd;
+  &quot;Occupation&quot;: &quot;FD421499-84B3-4660-9E7E-AFB312D5A4BE&quot;,&#xd;
+  &quot;AnnualIncome&quot;: &quot;121212&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/addIndividualFamily</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add User General Information" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;Name&quot;: &quot;Vikram&quot;,&#xd;
+  &quot;Surname&quot;: &quot;Paul&quot;,&#xd;
+  &quot;DoB&quot;: &quot;2002-05-13&quot;,&#xd;
+  &quot;Gender&quot;: &quot;Male&quot;,&#xd;
+  &quot;PlaceOfBirth&quot;: &quot;Durgapur&quot;,&#xd;
+  &quot;ReligionID&quot;: &quot;EC13B55E-368F-40E0-A399-BE9859B16CFF&quot;,&#xd;
+  &quot;OtherReligon&quot;: &quot;&quot;,&#xd;
+  &quot;CountryID&quot;: &quot;29EAECD4-1E5A-4059-BC56-046BF3EA4EFA&quot;,&#xd;
+  &quot;PhoneNo&quot;: &quot;9082618066&quot;,&#xd;
+  &quot;AltPhoneNo&quot;: &quot;8850779875&quot;,&#xd;
+  &quot;TelephoneNumber&quot;: &quot;&quot;,&#xd;
+  &quot;EmailID&quot;: &quot;vikram.paul@ril.com&quot;,&#xd;
+  &quot;MTID&quot;: &quot;94CA17AD-AF07-4D55-98DD-C0769F14678E&quot;,&#xd;
+  &quot;OtherLanguage&quot;: &quot;&quot;,&#xd;
+  &quot;SameAddress&quot;: true,&#xd;
+  &quot;CurrentAddress&quot;: &quot;Durgapur&quot;,&#xd;
+  &quot;CAPinCode&quot;: &quot;713201&quot;,&#xd;
+  &quot;CACity&quot;: &quot;PASCHIM BARDHAMAN&quot;,&#xd;
+  &quot;CAState&quot;: &quot;WEST BENGAL&quot;,&#xd;
+  &quot;CACountryID&quot;: &quot;29EAECD4-1E5A-4059-BC56-046BF3EA4EFA&quot;,&#xd;
+  &quot;CAAreaName&quot;: &quot;Durgapur HO&quot;,&#xd;
+  &quot;PermanentAddress&quot;: &quot;Durgapur&quot;,&#xd;
+  &quot;PAPinCode&quot;: &quot;713201&quot;,&#xd;
+  &quot;PACity&quot;: &quot;PASCHIM BARDHAMAN&quot;,&#xd;
+  &quot;PAState&quot;: &quot;WEST BENGAL&quot;,&#xd;
+  &quot;PACountryID&quot;: &quot;29EAECD4-1E5A-4059-BC56-046BF3EA4EFA&quot;,&#xd;
+  &quot;PAAreaName&quot;: &quot;Durgapur HO&quot;,&#xd;
+  &quot;HasDisability&quot;: 1,&#xd;
+  &quot;Disability&quot;: &quot;DC24F312-BF0A-4C0D-91CE-4FE71CC5478C&quot;,&#xd;
+  &quot;OtherDisability&quot;: &quot;&quot;,&#xd;
+  &quot;DefaultAddress&quot;: &quot;Current&quot;,&#xd;
+  &quot;TotalMembers&quot;: &quot;4&quot;,&#xd;
+  &quot;AnnualIncome&quot;: null,&#xd;
+  &quot;IsCriminalProceeding&quot;: 0,&#xd;
+  &quot;IsMisconduct&quot;: 0,&#xd;
+  &quot;UserSignedName&quot;: &quot;&quot;,&#xd;
+  &quot;AreaCode&quot;: null,&#xd;
+  &quot;AnnualIncome_Family&quot;: null,&#xd;
+  &quot;TotalMembers_Family&quot;: &quot;4&quot;,&#xd;
+  &quot;GenerationAttendingUniversity_Family&quot;: &quot;First&quot;,&#xd;
+  &quot;TotalMembersStudying_Family&quot;: &quot;0&quot;,&#xd;
+  &quot;IsSingleParent_Family&quot;: false,&#xd;
+  &quot;AreParentsDeceased_Family&quot;: &quot;No&quot;,&#xd;
+  &quot;AC_FirstName&quot;: &quot;Abhinav&quot;,&#xd;
+  &quot;AC_Surname&quot;: &quot;Chaturvedi&quot;,&#xd;
+  &quot;AC_Email&quot;: &quot;abhinav4.chaturvedi@ril.com&quot;,&#xd;
+  &quot;AC_ContactNo&quot;: &quot;8850779875&quot;,&#xd;
+  &quot;AC_Relationship&quot;: &quot;Guardian&quot;,&#xd;
+  &quot;AC_Address&quot;: &quot;Adas&quot;,&#xd;
+  &quot;AC_Pincode&quot;: &quot;400701&quot;,&#xd;
+  &quot;AC_City&quot;: &quot;THANE&quot;,&#xd;
+  &quot;AC_State&quot;: &quot;MAHARASHTRA&quot;,&#xd;
+  &quot;AC_Country&quot;: &quot;29EAECD4-1E5A-4059-BC56-046BF3EA4EFA&quot;,&#xd;
+  &quot;AC_AreaName&quot;: &quot;Ghansoli S.O&quot;,&#xd;
+  &quot;familyDetails&quot;: [],&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/addugi</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="User Academic Details" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;APPID&quot;: &quot;5AE0DB4A-FE76-4C7F-9AF4-E09817D1E356&quot;,&#xd;
+  &quot;DegreeLevel_input&quot;: &quot;UG&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;,&#xd;
+  &quot;Type&quot;: &quot;state&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/getAccadmicDetails</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add User Academic Details - 10th 12th" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UserAcademicDetails&quot;: [&#xd;
+    {&#xd;
+      &quot;UAID&quot;: &quot;FA14C7F6-21E0-4D02-BF73-CE7BF790CD26&quot;,&#xd;
+      &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;,&#xd;
+      &quot;ELID&quot;: &quot;A1164811-0451-4B90-8221-DA5FADD9614A&quot;,&#xd;
+      &quot;COID&quot;: &quot;04E1A202-B61B-47A7-8F4B-197DB6E7254E&quot;,&#xd;
+      &quot;CourseName&quot;: null,&#xd;
+      &quot;ProgramName&quot;: null,&#xd;
+      &quot;DegreeProgram&quot;: null,&#xd;
+      &quot;FOSID&quot;: null,&#xd;
+      &quot;BID&quot;: &quot;28A5C878-9A1F-401E-8AF6-A017C1DDD607&quot;,&#xd;
+      &quot;Percentage&quot;: &quot;87.50&quot;,&#xd;
+      &quot;InstituteName&quot;: &quot;TN&quot;,&#xd;
+      &quot;CourseDuration&quot;: null,&#xd;
+      &quot;CourseCompletionYear&quot;: 2013,&#xd;
+      &quot;ActualScore&quot;: 800,&#xd;
+      &quot;EvaluationScore&quot;: 700,&#xd;
+      &quot;InstituteAddress&quot;: &quot;BANKURA&quot;,&#xd;
+      &quot;MediumOfInstruction&quot;: &quot;B79C1CB9-4487-43A1-9DB8-10701D2B7B27&quot;,&#xd;
+      &quot;InstituteState&quot;: &quot;WEST BENGAL&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/adduadb</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add User Academic Details - Graduation" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UserAcademicDetails&quot;: [&#xd;
+    {&#xd;
+      &quot;UAID&quot;: &quot;E5B95359-2783-43B5-9338-B911DF504D7F&quot;,&#xd;
+      &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;,&#xd;
+      &quot;ELID&quot;: &quot;B501F6C8-F856-4DD1-AAA8-DBB5D4CD0829&quot;,&#xd;
+      &quot;COID&quot;: null,&#xd;
+      &quot;CourseName&quot;: &quot;B.Com. Hons.(Bachelor of Commerce)(Honours)&quot;,&#xd;
+      &quot;ProgramName&quot;: &quot;Economics&quot;,&#xd;
+      &quot;DegreeProgram&quot;: &quot;Commerce&quot;,&#xd;
+      &quot;FOSID&quot;: null,&#xd;
+      &quot;BID&quot;: null,&#xd;
+      &quot;Percentage&quot;: 0,&#xd;
+      &quot;InstituteName&quot;: &quot;Mes College Of Engineering, Kuttipuram&quot;,&#xd;
+      &quot;CourseStartYear&quot;: 2023,&#xd;
+      &quot;CourseDuration&quot;: 3,&#xd;
+      &quot;CourseCompletionYear&quot;: 2026,&#xd;
+      &quot;ActualScore&quot;: null,&#xd;
+      &quot;EvaluationScore&quot;: null,&#xd;
+      &quot;InstituteAddress&quot;: &quot;SHAHDARA DISTRICT&quot;,&#xd;
+      &quot;MediumOfInstruction&quot;: null,&#xd;
+      &quot;InstituteState&quot;: &quot;DELHI&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/adduadb</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="User Award &amp; Achievements" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/getAwardAndAchivement</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add User Extra Curricular Activities" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UserProfessionalSummaryDetails&quot;: [&#xd;
+    {&#xd;
+      &quot;UPEID&quot;: null,&#xd;
+      &quot;CompanyName&quot;: &quot;Test&quot;,&#xd;
+      &quot;MEID&quot;: &quot;C6A7A142-ADA2-44C1-92AC-AA4377924E6C&quot;,&#xd;
+      &quot;Position&quot;: &quot;Test&quot;,&#xd;
+      &quot;JobRole&quot;: &quot;Test&quot;,&#xd;
+      &quot;JoiningDate&quot;: null,&#xd;
+      &quot;ReleaseDate&quot;: null,&#xd;
+      &quot;PSType&quot;: &quot;CA&quot;,&#xd;
+      &quot;Description&quot;: null,&#xd;
+      &quot;AwardedYear&quot;: null,&#xd;
+      &quot;DocumentName&quot;: &quot;1705060352388_sample.pdf&quot;,&#xd;
+      &quot;DocumentPath&quot;: null,&#xd;
+      &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/adduupsb</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add User Special Recognitions" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;UserProfessionalSummaryDetails&quot;: [&#xd;
+    {&#xd;
+      &quot;UPEID&quot;: null,&#xd;
+      &quot;CompanyName&quot;: &quot;Test Award&quot;,&#xd;
+      &quot;MEID&quot;: null,&#xd;
+      &quot;Position&quot;: null,&#xd;
+      &quot;JobRole&quot;: null,&#xd;
+      &quot;JoiningDate&quot;: null,&#xd;
+      &quot;ReleaseDate&quot;: null,&#xd;
+      &quot;PSType&quot;: &quot;SR&quot;,&#xd;
+      &quot;Description&quot;: &quot;Test&quot;,&#xd;
+      &quot;AwardedYear&quot;: &quot;2023&quot;,&#xd;
+      &quot;DocumentName&quot;: &quot;1705060717151sample.pdf&quot;,&#xd;
+      &quot;DocumentPath&quot;: null,&#xd;
+      &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/adduupsb</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add User Other Scholarship" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;OtherScholarshipDetails&quot;: [&#xd;
+    {&#xd;
+      &quot;OSID&quot;: null,&#xd;
+      &quot;ScholarshipName&quot;: &quot;Test&quot;,&#xd;
+      &quot;IsReceived&quot;: 1,&#xd;
+      &quot;Duration&quot;: &quot;2&quot;,&#xd;
+      &quot;ScholarshipYear&quot;: &quot;2023&quot;,&#xd;
+      &quot;ProgramName&quot;: null,&#xd;
+      &quot;Description&quot;: &quot;1122&quot;,&#xd;
+      &quot;DocumentName&quot;: &quot;1705061024603_sample.pdf&quot;,&#xd;
+      &quot;DocumentPath&quot;: null,&#xd;
+      &quot;Inactive&quot;: 0,&#xd;
+      &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/adduosb</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete User Other Scholarship" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;ItemID&quot;: &quot;1DB9DC43-9C9D-4B41-BD88-32E9E994DEEE&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;,&#xd;
+  &quot;PSType&quot;: &quot;OS&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/deleteAwardAndAchivement</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete User Special Recognition" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;ItemID&quot;: &quot;8C00EE6B-8562-4DC7-B27D-F2C2B763EE18&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;,&#xd;
+  &quot;PSType&quot;: &quot;SR&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/deleteAwardAndAchivement</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete User Extra Curricular Activities" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;ItemID&quot;: &quot;9D15BB59-6F5A-4B3C-B67C-B19DD1E0A6E3&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;,&#xd;
+  &quot;PSType&quot;: &quot;CA&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/deleteAwardAndAchivement</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete User Family Member" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;FMID&quot;: &quot;D3F75752-6E00-4598-85F0-2571F6660F33&quot;,&#xd;
+  &quot;FID&quot;: &quot;E1F40C2F-52AF-44DA-8305-8B9D93BCFD77&quot;,&#xd;
+  &quot;UID&quot;: &quot;7C135C0E-1596-4986-9DA1-B288D828FE73&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">scholarshipservicessit.jio.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/scholarship-be/api/deleteufm</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="TokenKey" elementType="Header">
+                <stringProp name="Header.name">TokenKey</stringProp>
+                <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InZpa3JhbS5wYXVsQHJpbC5jb20iLCJpYXQiOjE3MDU2ODA0NjgsImV4cCI6MTcwNTcxNjQ2OCwiaXNzIjoiN0MxMzVDMEUtMTU5Ni00OTg2LTlEQTEtQjI4OEQ4MjhGRTczIn0.fl8_KJI_DQj4i8R70FS-naq4cRqLixAGAlQerkN5CrQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <boolProp name="useGroupName">true</boolProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="5.4.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Extrenal_credit" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Not.A/Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;114&quot;, &quot;Google Chrome&quot;;v=&quot;114&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+          </elementProp>
+          <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+            <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+            <stringProp name="Header.value">1</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">replogin.jiolabs.com</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">csocentral.jiolabs.com</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://replogin.jiolabs.com/oam/server/auth_cred_submit" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">Dec@2022</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="resource_url" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">resource_url</stringProp>
+                  <stringProp name="Argument.value">%252Fuser%252Floginsso</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="request_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">request_id</stringProp>
+                  <stringProp name="Argument.value">6446577424203794637</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">60552390</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">oam/server/auth_cred_submit</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://csocentral.jiolabs.com/saml/SSO" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="SAMLResponse" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SAMLResponse</stringProp>
+                  <stringProp name="Argument.value">PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6cHJvdG9jb2wiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcv&#xd;
+MjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIERlc3RpbmF0aW9uPSJodHRwczovL2Nz&#xd;
+b2NlbnRyYWwuamlvbGFicy5jb20vc2FtbC9TU08iIElEPSJpZC01bnZZZFY1ZTB6&#xd;
+MlRXSzVldmY5RnBESXZqY0NNcE1yeG9ZVU9MYUQ0IiBJblJlc3BvbnNlVG89ImEz&#xd;
+Y2Y4ZDUyODgxNGZpNDc0NDc5YjcxYzA5aDkwYjkiIElzc3VlSW5zdGFudD0iMjAy&#xd;
+My0wOS0xM1QwOTo0OTo1MVoiIFZlcnNpb249IjIuMCI+PHNhbWw6SXNzdWVyIHht&#xd;
+bG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24i&#xd;
+IEZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOm5hbWVpZC1mb3Jt&#xd;
+YXQ6ZW50aXR5Ij5odHRwczovL3JlcGxvZ2luLmppb2xhYnMuY29tL29hbS9mZWQ8&#xd;
+L3NhbWw6SXNzdWVyPjxzYW1scDpTdGF0dXM+PHNhbWxwOlN0YXR1c0NvZGUgVmFs&#xd;
+dWU9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpzdGF0dXM6U3VjY2VzcyIv&#xd;
+Pjwvc2FtbHA6U3RhdHVzPjxzYW1sOkFzc2VydGlvbiB4bWxuczpzYW1sPSJ1cm46&#xd;
+b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIiBJRD0iaWQtdE82LU0y&#xd;
+TlIyYXVuSmNoLUFJWFRyNXF2OXoxYlFXeFh3ZkVBWng1OCIgSXNzdWVJbnN0YW50&#xd;
+PSIyMDIzLTA5LTEzVDA5OjQ5OjUxWiIgVmVyc2lvbj0iMi4wIj48c2FtbDpJc3N1&#xd;
+ZXIgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlkLWZv&#xd;
+cm1hdDplbnRpdHkiPmh0dHBzOi8vcmVwbG9naW4uamlvbGFicy5jb20vb2FtL2Zl&#xd;
+ZDwvc2FtbDpJc3N1ZXI+PGRzaWc6U2lnbmF0dXJlIHhtbG5zOmRzaWc9Imh0dHA6&#xd;
+Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPjxkc2lnOlNpZ25lZEluZm8+&#xd;
+PGRzaWc6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93&#xd;
+d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjxkc2lnOlNpZ25hdHVy&#xd;
+ZU1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1s&#xd;
+ZHNpZyNyc2Etc2hhMSIvPjxkc2lnOlJlZmVyZW5jZSBVUkk9IiNpZC10TzYtTTJO&#xd;
+UjJhdW5KY2gtQUlYVHI1cXY5ejFiUVd4WHdmRUFaeDU4Ij48ZHNpZzpUcmFuc2Zv&#xd;
+cm1zPjxkc2lnOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3Jn&#xd;
+LzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIi8+PGRzaWc6VHJh&#xd;
+bnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwt&#xd;
+ZXhjLWMxNG4jIi8+PC9kc2lnOlRyYW5zZm9ybXM+PGRzaWc6RGlnZXN0TWV0aG9k&#xd;
+IEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3No&#xd;
+YTEiLz48ZHNpZzpEaWdlc3RWYWx1ZT5LK3B2MERCTzgyeS8rdnRKYll4Q2Y0NzUy&#xd;
+WGc9PC9kc2lnOkRpZ2VzdFZhbHVlPjwvZHNpZzpSZWZlcmVuY2U+PC9kc2lnOlNp&#xd;
+Z25lZEluZm8+PGRzaWc6U2lnbmF0dXJlVmFsdWU+RXoyekh3ckUzSWE1WmRzeGU4&#xd;
+S0F4aFJSMkJCN0pYQnVrVWF4NTE1bXBVWVhPWGJnTWxaamJHMXpyLyszWVk1NQpD&#xd;
+STVyVUQwa0FjSWM3Y2VvTlBrbXdFNDIycCtvZ0F3SXEzSHE4TWRJeUJwLzI4RDlX&#xd;
+VUlxQ200VGRPS3lGUzN4CmthTWlTU045czJYQnpGczBpc0lLZXNHSk1lN0l6cUhl&#xd;
+S3ViSVU3QU8xaTBMMVNTeU9FR2V1RjVTUjhZQ3FUVHgKVkdFSVMvNU1EeGRhOXlj&#xd;
+L1pxL0hIU0hodVNGZ2ZZbCtaWUhFcWpaSkZGc3hyWXc3bGlSNXppWkg2T2tTaTQ1&#xd;
+MAo3VFl3U0o5UXU0b0VYalZCcXd0SFpWQVVaL1JXMHYwQTBnall2RW9CSUo1SWFP&#xd;
+Snp2MGpuM3VtK3BWaVJHWkJqCnh2L1dTK2UzaWk4T0ZNd3BzY0l1Q1E9PTwvZHNp&#xd;
+ZzpTaWduYXR1cmVWYWx1ZT48L2RzaWc6U2lnbmF0dXJlPjxzYW1sOlN1YmplY3Q+&#xd;
+PHNhbWw6TmFtZUlEIEZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6MS4x&#xd;
+Om5hbWVpZC1mb3JtYXQ6dW5zcGVjaWZpZWQiPjYwNTUyMzkwPC9zYW1sOk5hbWVJ&#xd;
+RD48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uIE1ldGhvZD0idXJuOm9hc2lzOm5h&#xd;
+bWVzOnRjOlNBTUw6Mi4wOmNtOmJlYXJlciI+PHNhbWw6U3ViamVjdENvbmZpcm1h&#xd;
+dGlvbkRhdGEgSW5SZXNwb25zZVRvPSJhM2NmOGQ1Mjg4MTRmaTQ3NDQ3OWI3MWMw&#xd;
+OWg5MGI5IiBOb3RPbk9yQWZ0ZXI9IjIwMjMtMDktMTNUMDk6NTQ6NTFaIiBSZWNp&#xd;
+cGllbnQ9Imh0dHBzOi8vY3NvY2VudHJhbC5qaW9sYWJzLmNvbS9zYW1sL1NTTyIv&#xd;
+Pjwvc2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uPjwvc2FtbDpTdWJqZWN0PjxzYW1s&#xd;
+OkNvbmRpdGlvbnMgTm90QmVmb3JlPSIyMDIzLTA5LTEzVDA5OjQ5OjUxWiIgTm90&#xd;
+T25PckFmdGVyPSIyMDIzLTA5LTEzVDA5OjU0OjUxWiI+PHNhbWw6QXVkaWVuY2VS&#xd;
+ZXN0cmljdGlvbj48c2FtbDpBdWRpZW5jZT5jc28tcmVwbGljYTwvc2FtbDpBdWRp&#xd;
+ZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWw6Q29uZGl0aW9u&#xd;
+cz48c2FtbDpBdXRoblN0YXRlbWVudCBBdXRobkluc3RhbnQ9IjIwMjMtMDktMTNU&#xd;
+MDk6NDk6NTFaIiBTZXNzaW9uSW5kZXg9ImlkLU9ILXdMRU9QS0dqUVA2S3pSSi1Y&#xd;
+V3pSSWJOTGhETk43YkhkcGVqQ28iIFNlc3Npb25Ob3RPbk9yQWZ0ZXI9IjIwMjMt&#xd;
+MDktMTNUMTA6NDk6NTFaIj48c2FtbDpBdXRobkNvbnRleHQ+PHNhbWw6QXV0aG5D&#xd;
+b250ZXh0Q2xhc3NSZWY+dXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFjOmNs&#xd;
+YXNzZXM6UGFzc3dvcmRQcm90ZWN0ZWRUcmFuc3BvcnQ8L3NhbWw6QXV0aG5Db250&#xd;
+ZXh0Q2xhc3NSZWY+PC9zYW1sOkF1dGhuQ29udGV4dD48L3NhbWw6QXV0aG5TdGF0&#xd;
+ZW1lbnQ+PHNhbWw6QXR0cmlidXRlU3RhdGVtZW50PjxzYW1sOkF0dHJpYnV0ZSBO&#xd;
+YW1lPSJFbWFpbElEIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FN&#xd;
+TDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1&#xd;
+ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhz&#xd;
+aTp0eXBlPSJ4czpzdHJpbmciPmFiY0Bub21haWwuY29tPC9zYW1sOkF0dHJpYnV0&#xd;
+ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9ImZp&#xd;
+cnN0bmFtZSIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4w&#xd;
+OmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1s&#xd;
+bnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlw&#xd;
+ZT0ieHM6c3RyaW5nIj5NdWphaGVlZCB1bCBpc2xhbTwvc2FtbDpBdHRyaWJ1dGVW&#xd;
+YWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJtYWls&#xd;
+IiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5h&#xd;
+bWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0i&#xd;
+aHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpz&#xd;
+dHJpbmciPmFiY0Bub21haWwuY29tPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2Ft&#xd;
+bDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9Ik9BTV9SRU1PVEVfVVNF&#xd;
+UiIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJu&#xd;
+YW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9&#xd;
+Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6&#xd;
+c3RyaW5nIj42MDU1MjM5MDwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0&#xd;
+cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJFbXBsb3llZSBJRCIgTmFtZUZv&#xd;
+cm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1h&#xd;
+dDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93&#xd;
+d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj42&#xd;
+MDU1MjM5MDwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxz&#xd;
+YW1sOkF0dHJpYnV0ZSBOYW1lPSJlbXBsb3llZUlEIiBOYW1lRm9ybWF0PSJ1cm46&#xd;
+b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48&#xd;
+c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcv&#xd;
+MjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPjYwNTUyMzkwPC9z&#xd;
+YW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmli&#xd;
+dXRlIE5hbWU9Ik9yZ2FuaXphdGlvbiBJZCIgTmFtZUZvcm1hdD0idXJuOm9hc2lz&#xd;
+Om5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6&#xd;
+QXR0cmlidXRlVmFsdWUgeHNpOm5pbD0idHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1dGU+&#xd;
+PHNhbWw6QXR0cmlidXRlIE5hbWU9InVpZCIgTmFtZUZvcm1hdD0idXJuOm9hc2lz&#xd;
+Om5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6&#xd;
+QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEv&#xd;
+WE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj42MDU1MjM5MDwvc2FtbDpB&#xd;
+dHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBO&#xd;
+YW1lPSJTVUJKRUNUX0lEIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVW&#xd;
+YWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEi&#xd;
+IHhzaTp0eXBlPSJ4czpzdHJpbmciPmNuPTYwNTUyMzkwLGNuPUVtcGxveWVlcyxj&#xd;
+bj1Vc2VycyxkYz1pZG0sZGM9amlvLGRjPWNvbTwvc2FtbDpBdHRyaWJ1dGVWYWx1&#xd;
+ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJVU0VSTkFN&#xd;
+RSIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJu&#xd;
+YW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9&#xd;
+Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6&#xd;
+c3RyaW5nIj42MDU1MjM5MDwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0&#xd;
+cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJlbWFpbCIgTmFtZUZvcm1hdD0i&#xd;
+dXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNp&#xd;
+YyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMu&#xd;
+b3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5hYmNAbm9t&#xd;
+YWlsLmNvbTwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxz&#xd;
+YW1sOkF0dHJpYnV0ZSBOYW1lPSJDSVJDTEVfQ09ERSIgTmFtZUZvcm1hdD0idXJu&#xd;
+Om9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+&#xd;
+PHNhbWw6QXR0cmlidXRlVmFsdWUgeHNpOm5pbD0idHJ1ZSIvPjwvc2FtbDpBdHRy&#xd;
+aWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9InNBTUFjY291bnROYW1lIiBOYW1l&#xd;
+Rm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9y&#xd;
+bWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4c2k6bmlsPSJ0cnVlIi8+&#xd;
+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iSklPX0NFTlRS&#xd;
+RV9JRCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0&#xd;
+dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeHNpOm5p&#xd;
+bD0idHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9&#xd;
+IlVTRVJfTE9HSU4iIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1M&#xd;
+OjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVl&#xd;
+IHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNp&#xd;
+OnR5cGU9InhzOnN0cmluZyI+NjA1NTIzOTA8L3NhbWw6QXR0cmlidXRlVmFsdWU+&#xd;
+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0ibW9iaWxlIiBO&#xd;
+YW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUt&#xd;
+Zm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0&#xd;
+cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJp&#xd;
+bmciPis5MTk4OTgyOTgyOTg8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0&#xd;
+dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iRW1wbG95ZWVOdW1iZXIiIE5h&#xd;
+bWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1m&#xd;
+b3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRw&#xd;
+Oi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmlu&#xd;
+ZyI+NjA1NTIzOTA8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0&#xd;
+ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iREVQQVJUTUVOVCIgTmFtZUZvcm1hdD0i&#xd;
+dXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNp&#xd;
+YyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeHNpOm5pbD0idHJ1ZSIvPjwvc2FtbDpB&#xd;
+dHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9IkNOIiBOYW1lRm9ybWF0PSJ1&#xd;
+cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2lj&#xd;
+Ij48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5v&#xd;
+cmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPjYwNTUyMzkw&#xd;
+PC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0&#xd;
+cmlidXRlIE5hbWU9IlVTRVJfTkFNRV9GVUxMIiBOYW1lRm9ybWF0PSJ1cm46b2Fz&#xd;
+aXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2Ft&#xd;
+bDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAw&#xd;
+MS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPjYwNTUyMzkwPC9zYW1s&#xd;
+OkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRl&#xd;
+IE5hbWU9Imxhc3RuYW1lIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVW&#xd;
+YWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEi&#xd;
+IHhzaTp0eXBlPSJ4czpzdHJpbmciPlBhdGhhbjwvc2FtbDpBdHRyaWJ1dGVWYWx1&#xd;
+ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJSb2xlIiBO&#xd;
+YW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUt&#xd;
+Zm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0&#xd;
+cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJp&#xd;
+bmciPmNuPWZvc25ldyByb2xlLGNuPWdyb3VwcyxkYz1pZG0sZGM9amlvLGRjPWNv&#xd;
+bTwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxu&#xd;
+czp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBl&#xd;
+PSJ4czpzdHJpbmciPmNuPWZwY2EsY249Z3JvdXBzLGRjPWlkbSxkYz1qaW8sZGM9&#xd;
+Y29tPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHht&#xd;
+bG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5&#xd;
+cGU9InhzOnN0cmluZyI+Y249cHJtbWFpbnRhaW5kZWxhcixjbj1ncm91cHMsZGM9&#xd;
+aWRtLGRjPWppbyxkYz1jb208L3NhbWw6QXR0cmlidXRlVmFsdWU+PHNhbWw6QXR0&#xd;
+cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1M&#xd;
+U2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5jbj1vdWRfdXNlcnMsY249Z3Jv&#xd;
+dXBzLGRjPWlkbSxkYz1qaW8sZGM9Y29tPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjxz&#xd;
+YW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8y&#xd;
+MDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+Y249cnJiZWF0LGNu&#xd;
+PWdyb3VwcyxkYz1pZG0sZGM9amlvLGRjPWNvbTwvc2FtbDpBdHRyaWJ1dGVWYWx1&#xd;
+ZT48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5v&#xd;
+cmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPmNuPXJwb3N1&#xd;
+c2Vycyxjbj1ncm91cHMsZGM9aWRtLGRjPWppbyxkYz1jb208L3NhbWw6QXR0cmli&#xd;
+dXRlVmFsdWU+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93&#xd;
+d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5j&#xd;
+bj1jc29jZW50cmFsLGNuPWdyb3VwcyxkYz1pZG0sZGM9amlvLGRjPWNvbTwvc2Ft&#xd;
+bDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0&#xd;
+ZSBOYW1lPSJTVE9SRV9DT0RFIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6&#xd;
+dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1&#xd;
+dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hl&#xd;
+bWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciLz48L3NhbWw6QXR0cmlidXRlPjxzYW1s&#xd;
+OkF0dHJpYnV0ZSBOYW1lPSJCUElEIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFt&#xd;
+ZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRy&#xd;
+aWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxT&#xd;
+Y2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPjYwNTUyMzkwPC9zYW1sOkF0dHJp&#xd;
+YnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9&#xd;
+Im5hbWUiIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDph&#xd;
+dHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5z&#xd;
+OnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9&#xd;
+InhzOnN0cmluZyI+NjA1NTIzOTA8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1s&#xd;
+OkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iZGVzaWduYXRpb24iIE5h&#xd;
+bWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1m&#xd;
+b3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRw&#xd;
+Oi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmlu&#xd;
+ZyI+WDQ8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2Ft&#xd;
+bDpBdHRyaWJ1dGUgTmFtZT0iRW1wbG95ZWVJRCIgTmFtZUZvcm1hdD0idXJuOm9h&#xd;
+c2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNh&#xd;
+bWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIw&#xd;
+MDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj42MDU1MjM5MDwvc2Ft&#xd;
+bDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0&#xd;
+ZSBOYW1lPSJVU0VSX1JPTEUiIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0&#xd;
+YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0&#xd;
+ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVt&#xd;
+YSIgeHNpOnR5cGU9InhzOnN0cmluZyI+WDQ8L3NhbWw6QXR0cmlidXRlVmFsdWU+&#xd;
+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iQWdlbnQgSWQi&#xd;
+IE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFt&#xd;
+ZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJo&#xd;
+dHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0&#xd;
+cmluZyI+NjA1NTIzOTA8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJp&#xd;
+YnV0ZT48L3NhbWw6QXR0cmlidXRlU3RhdGVtZW50Pjwvc2FtbDpBc3NlcnRpb24+&#xd;
+PC9zYW1scDpSZXNwb25zZT4=&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">saml/SSO</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[2]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">3524</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://csocentral.jiolabs.com/csoanalytics/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">csoanalytics/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">2996</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://replogin.jiolabs.com/oamfed/idp/samlv20" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="SAMLRequest" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SAMLRequest</stringProp>
+                  <stringProp name="Argument.value">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c2FtbDJwOkF1dGhuUmVxdWVzdCB4bWxuczpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCIgQXNzZXJ0aW9uQ29uc3VtZXJTZXJ2aWNlVVJMPSJodHRwczovL2Nzb2NlbnRyYWwuamlvbGFicy5jb206NDQzL2Nzb2FuYWx5dGljcy9zYW1sL1NTTyIgRGVzdGluYXRpb249Imh0dHBzOi8vcmVwbG9naW4uamlvbGFicy5jb20vb2FtZmVkL2lkcC9zYW1sdjIwIiBGb3JjZUF1dGhuPSJmYWxzZSIgSUQ9ImEyZzlmaTZiYjg4YzkwNWViODg3aDMyY2Q3OTYxaCIgSXNQYXNzaXZlPSJmYWxzZSIgSXNzdWVJbnN0YW50PSIyMDIzLTA5LTEzVDA5OjQ5OjU1LjM0N1oiIFByb3RvY29sQmluZGluZz0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmJpbmRpbmdzOkhUVFAtUE9TVCIgVmVyc2lvbj0iMi4wIj48c2FtbDI6SXNzdWVyIHhtbG5zOnNhbWwyPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5jc2E8L3NhbWwyOklzc3Vlcj48ZHM6U2lnbmF0dXJlIHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48ZHM6U2lnbmVkSW5mbz48ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjxkczpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjcnNhLXNoYTEiLz48ZHM6UmVmZXJlbmNlIFVSST0iI2EyZzlmaTZiYjg4YzkwNWViODg3aDMyY2Q3OTYxaCI+PGRzOlRyYW5zZm9ybXM+PGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIi8+PGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGlnZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3NoYTEiLz48ZHM6RGlnZXN0VmFsdWU+YkVsYk9ZdW13R2czelV3endMUWxHZWZpYUpBPTwvZHM6RGlnZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PC9kczpTaWduZWRJbmZvPjxkczpTaWduYXR1cmVWYWx1ZT5TQWlONmhzc2R3dU9ITGw3bi92WXFzeUVLODE2VlJFYjVQdlZvQVZielFsVW9LMk96R09nNlpEN0Fnd25CN1dVT3JJbHByb3c3b1pYalRLbVVpUjJIUGN1MmpZQVZLVkpRMGMreXdhYnBnSFFFS0hrN2dtZ0pZTXVGVjFFQWRONG10SVhTMkoxY3ZrRENjSkRrQzd5L1AwekhPYUx3MEpoeWZlY1daNHVKYlVLZzNLY1BucWFuL3VhN0VOUmJhN0xOakhiSlBhb3ZXb1liUHpxeVZTOHdHV0hDK21CUG5pYWIyUFRrMktPYjhycVkxTnNEQ2ltY1pha1NnM21Zc3RySzNmRlBVTFpaWENYSm5zOHpTUmhDelNOZUpqdkdwa2hyT28yT3JFb2lraGNGU0FzdmRxbkxUMnllc2s5cjJKZ3RpZTc1czRxeXQ5UjloVGl5NFBoOXc9PTwvZHM6U2lnbmF0dXJlVmFsdWU+PGRzOktleUluZm8+PGRzOlg1MDlEYXRhPjxkczpYNTA5Q2VydGlmaWNhdGU+TUlJRFhUQ0NBa1dnQXdJQkFnSUVHWHBEOERBTkJna3Foa2lHOXcwQkFRc0ZBREJmTVFzd0NRWURWUVFHRXdKcGJqRUxNQWtHQTFVRQpDQk1DYldneEZEQVNCZ05WQkFjVEMyMWhhR0Z5WVhOb2RISmhNUXd3Q2dZRFZRUUtFd05xYVc4eEREQUtCZ05WQkFzVEEycHBiekVSCk1BOEdBMVVFQXhNSWJXOW9ZVzF0WVdRd0hoY05NVGt4TWpBMk1UTTFNREV4V2hjTk1qQXdNekExTVRNMU1ERXhXakJmTVFzd0NRWUQKVlFRR0V3SnBiakVMTUFrR0ExVUVDQk1DYldneEZEQVNCZ05WQkFjVEMyMWhhR0Z5WVhOb2RISmhNUXd3Q2dZRFZRUUtFd05xYVc4eApEREFLQmdOVkJBc1RBMnBwYnpFUk1BOEdBMVVFQXhNSWJXOW9ZVzF0WVdRd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3CmdnRUtBb0lCQVFEQXBaYnJROVhLZGk0bXZpMEVQVGszRUVreHNwZEU4NWoxMTBONUpGaFRZYWZROVphSzFudlVWNkxvYm05TC83VnQKUzMxYU9XSWt2cmx3OUpqK1pkNkNFbTlzQVlQV2FOL3p3WGRJTVJNcC9VamR5Z0FUODg2QjJZKzRFMlRLd0xZeXQvUEZyZHpPNmhWUwpGY2h6amhBMzBvVkxEeW8vQXpkVngxZ2lsc3FvbHh0VFpFUFdqZXcvbmU5SjB2SFZnSnNUT3B6TDRzL3d6eVdmaFB1c1pqWllkTTBwCkQ4RXdyQzlFd3EwZWR1MldGY2J4RjBnaFlrck05M0tUUCt5cHg0T1Z5YnVnOGMvek9CNHpOUUF1dWx5SDJIbS9peHJNOEd3SzRoMWoKYlJnZnJ5SDc3UHNsbGlaVEhlTjl4TXNSVER0K3I3VHlOZDY1WUQ3MEpoSCtlNEN6QWdNQkFBR2pJVEFmTUIwR0ExVWREZ1FXQkJReQorQlByM29xZHpiRzF1TS8yVXJNMkpqak90ekFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBdlVmVE9KTGRJMmwvclJ0ZDhnUjQyV2MyCmU0VnY1ZjZMZW1VSXZvTFIyUi95LzlPZVR6amZxMDNnV0l5YWZCMCt1UkN6cVVLc3VtTDhGQ0dqWGd1MkZkV1VRbHZKcWx6UDV6WloKcDBDY1JGNkIxTVpTQWdLeEVSdjF2aklIKzBoK1V1WmYvVkp3NkJzaGlBZkVROWgyZ2NZT0xTdGZ5NjU4WGUxdzhDVHFaakc1Z0ZzVgp4OUFWTm5UMHdYdnFYcDhpdnNRRkF6dEk5bDI1bExZazh2TFJBMnhMb0xOaDF3R1ZoNkR5QmMwbE1BUnZJaVp0emQ0YmNFUC9ZaTBsCnROZ2JwUlg3OFJpWUpIb1pTL2dzZGFVY2JZU0Q1Y2RvVnVIRk5YdFpqbkN6WDBIZDloY0N3eDE3eThsYXB5OWExaGozWmdQOVNXWkQKMllCR3VsZGY5NGo0YlE9PTwvZHM6WDUwOUNlcnRpZmljYXRlPjwvZHM6WDUwOURhdGE+PC9kczpLZXlJbmZvPjwvZHM6U2lnbmF0dXJlPjwvc2FtbDJwOkF1dGhuUmVxdWVzdD4=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">oamfed/idp/samlv20</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[4]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">141</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://csocentral.jiolabs.com/csoanalytics/saml/SSO" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="SAMLResponse" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SAMLResponse</stringProp>
+                  <stringProp name="Argument.value">PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6cHJvdG9jb2wiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcv&#xd;
+MjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIERlc3RpbmF0aW9uPSJodHRwczovL2Nz&#xd;
+b2NlbnRyYWwuamlvbGFicy5jb206NDQzL2Nzb2FuYWx5dGljcy9zYW1sL1NTTyIg&#xd;
+SUQ9ImlkLVlTUkNYT2J0MWp3cnVjOVVYc0wwdGsxdDJVMWc2NDJBMUwxRkR4Z1gi&#xd;
+IEluUmVzcG9uc2VUbz0iYTJnOWZpNmJiODhjOTA1ZWI4ODdoMzJjZDc5NjFoIiBJ&#xd;
+c3N1ZUluc3RhbnQ9IjIwMjMtMDktMTNUMDk6NDk6NTdaIiBWZXJzaW9uPSIyLjAi&#xd;
+PjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FN&#xd;
+TDoyLjA6YXNzZXJ0aW9uIiBGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1M&#xd;
+OjIuMDpuYW1laWQtZm9ybWF0OmVudGl0eSI+aHR0cHM6Ly9yZXBsb2dpbi5qaW9s&#xd;
+YWJzLmNvbS9vYW0vZmVkPC9zYW1sOklzc3Vlcj48c2FtbHA6U3RhdHVzPjxzYW1s&#xd;
+cDpTdGF0dXNDb2RlIFZhbHVlPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xd;
+c3RhdHVzOlN1Y2Nlc3MiLz48L3NhbWxwOlN0YXR1cz48c2FtbDpBc3NlcnRpb24g&#xd;
+eG1sbnM6c2FtbD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlv&#xd;
+biIgSUQ9ImlkLU1Kb045SGdhbjdSNmpiaUR2NGwyMUdudHFMcmJvQU5SZ0ZhY1hi&#xd;
+ZWgiIElzc3VlSW5zdGFudD0iMjAyMy0wOS0xM1QwOTo0OTo1N1oiIFZlcnNpb249&#xd;
+IjIuMCI+PHNhbWw6SXNzdWVyIEZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNB&#xd;
+TUw6Mi4wOm5hbWVpZC1mb3JtYXQ6ZW50aXR5Ij5odHRwczovL3JlcGxvZ2luLmpp&#xd;
+b2xhYnMuY29tL29hbS9mZWQ8L3NhbWw6SXNzdWVyPjxkc2lnOlNpZ25hdHVyZSB4&#xd;
+bWxuczpkc2lnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48&#xd;
+ZHNpZzpTaWduZWRJbmZvPjxkc2lnOkNhbm9uaWNhbGl6YXRpb25NZXRob2QgQWxn&#xd;
+b3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMi&#xd;
+Lz48ZHNpZzpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3Lncz&#xd;
+Lm9yZy8yMDAwLzA5L3htbGRzaWcjcnNhLXNoYTEiLz48ZHNpZzpSZWZlcmVuY2Ug&#xd;
+VVJJPSIjaWQtTUpvTjlIZ2FuN1I2amJpRHY0bDIxR250cUxyYm9BTlJnRmFjWGJl&#xd;
+aCI+PGRzaWc6VHJhbnNmb3Jtcz48ZHNpZzpUcmFuc2Zvcm0gQWxnb3JpdGhtPSJo&#xd;
+dHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjZW52ZWxvcGVkLXNpZ25h&#xd;
+dHVyZSIvPjxkc2lnOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMu&#xd;
+b3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjwvZHNpZzpUcmFuc2Zvcm1zPjxk&#xd;
+c2lnOkRpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIw&#xd;
+MDAvMDkveG1sZHNpZyNzaGExIi8+PGRzaWc6RGlnZXN0VmFsdWU+dnNxTFVadzZ6&#xd;
+bDVGQmU2Q0JqM1hpNEpIZGhRPTwvZHNpZzpEaWdlc3RWYWx1ZT48L2RzaWc6UmVm&#xd;
+ZXJlbmNlPjwvZHNpZzpTaWduZWRJbmZvPjxkc2lnOlNpZ25hdHVyZVZhbHVlPldV&#xd;
+cldtcDNOSFo3T2dxNXpZZ0p5STFDdE9BN01NNkl6L1BvYlRFZTdUUUFUY3ZiQ0Rz&#xd;
+VStyNUQ4R0EvUW9iQm8KQ1NmdVlzZGJBaGxwdzJlRmtSQ29IZVZUYjE5U3RHNlBv&#xd;
+UVd2YkF4NGhPUjhBeWZITzFMcXo0aUNNMnJBT2Y3Rwp2STFzL1JnYXo0dEJVajRH&#xd;
+M0ZCRTN6ZnhqWVdVNGw1N1VBWnJIOEJSbWlwM2pTRWpDQVkybnY4S2tIZEIwYm5a&#xd;
+CkUyZFlPdXpmTFNUUE4zc3QySTlmdUxBY2xZSXh5Q2d1bzArWGdaVHF5MXRrWEUv&#xd;
+WVNwQ2dzbm9Hdm0yMEpJMzYKNEdmczlUVlZ0VFVyODhIMjlSeGVsbElreE5aU2NV&#xd;
+bEw0bTVXT3FhbmVNUXRhMWJsNjNtYmREZExBMGxLMFZULwpzTHFEQkd6QzhiQi9C&#xd;
+NENtV01RMTFBPT08L2RzaWc6U2lnbmF0dXJlVmFsdWU+PC9kc2lnOlNpZ25hdHVy&#xd;
+ZT48c2FtbDpTdWJqZWN0PjxzYW1sOk5hbWVJRCBGb3JtYXQ9InVybjpvYXNpczpu&#xd;
+YW1lczp0YzpTQU1MOjEuMTpuYW1laWQtZm9ybWF0OnVuc3BlY2lmaWVkIj42MDU1&#xd;
+MjM5MDwvc2FtbDpOYW1lSUQ+PHNhbWw6U3ViamVjdENvbmZpcm1hdGlvbiBNZXRo&#xd;
+b2Q9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpjbTpiZWFyZXIiPjxzYW1s&#xd;
+OlN1YmplY3RDb25maXJtYXRpb25EYXRhIEluUmVzcG9uc2VUbz0iYTJnOWZpNmJi&#xd;
+ODhjOTA1ZWI4ODdoMzJjZDc5NjFoIiBOb3RPbk9yQWZ0ZXI9IjIwMjMtMDktMTNU&#xd;
+MDk6NTQ6NTdaIiBSZWNpcGllbnQ9Imh0dHBzOi8vY3NvY2VudHJhbC5qaW9sYWJz&#xd;
+LmNvbTo0NDMvY3NvYW5hbHl0aWNzL3NhbWwvU1NPIi8+PC9zYW1sOlN1YmplY3RD&#xd;
+b25maXJtYXRpb24+PC9zYW1sOlN1YmplY3Q+PHNhbWw6Q29uZGl0aW9ucyBOb3RC&#xd;
+ZWZvcmU9IjIwMjMtMDktMTNUMDk6NDk6NTdaIiBOb3RPbk9yQWZ0ZXI9IjIwMjMt&#xd;
+MDktMTNUMDk6NTQ6NTdaIj48c2FtbDpBdWRpZW5jZVJlc3RyaWN0aW9uPjxzYW1s&#xd;
+OkF1ZGllbmNlPmNzYTwvc2FtbDpBdWRpZW5jZT48L3NhbWw6QXVkaWVuY2VSZXN0&#xd;
+cmljdGlvbj48L3NhbWw6Q29uZGl0aW9ucz48c2FtbDpBdXRoblN0YXRlbWVudCBB&#xd;
+dXRobkluc3RhbnQ9IjIwMjMtMDktMTNUMDk6NDk6NTFaIiBTZXNzaW9uSW5kZXg9&#xd;
+ImlkLU9ILXdMRU9QS0dqUVA2S3pSSi1YV3pSSWJOTGhETk43YkhkcGVqQ28iIFNl&#xd;
+c3Npb25Ob3RPbk9yQWZ0ZXI9IjIwMjMtMDktMTNUMTA6NDk6NTdaIj48c2FtbDpB&#xd;
+dXRobkNvbnRleHQ+PHNhbWw6QXV0aG5Db250ZXh0Q2xhc3NSZWY+dXJuOm9hc2lz&#xd;
+Om5hbWVzOnRjOlNBTUw6Mi4wOmFjOmNsYXNzZXM6UGFzc3dvcmRQcm90ZWN0ZWRU&#xd;
+cmFuc3BvcnQ8L3NhbWw6QXV0aG5Db250ZXh0Q2xhc3NSZWY+PC9zYW1sOkF1dGhu&#xd;
+Q29udGV4dD48L3NhbWw6QXV0aG5TdGF0ZW1lbnQ+PHNhbWw6QXR0cmlidXRlU3Rh&#xd;
+dGVtZW50PjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJFbWFpbElEIiBOYW1lRm9ybWF0&#xd;
+PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJh&#xd;
+c2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53&#xd;
+My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPmFiY0Bu&#xd;
+b21haWwuY29tPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+&#xd;
+PHNhbWw6QXR0cmlidXRlIE5hbWU9ImZpcnN0bmFtZSIgTmFtZUZvcm1hdD0idXJu&#xd;
+Om9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+&#xd;
+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3Jn&#xd;
+LzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5NdWphaGVlZCB1&#xd;
+bCBpc2xhbTwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxz&#xd;
+YW1sOkF0dHJpYnV0ZSBOYW1lPSJtYWlsIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6&#xd;
+bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpB&#xd;
+dHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y&#xd;
+TUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPmFiY0Bub21haWwuY29tPC9z&#xd;
+YW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmli&#xd;
+dXRlIE5hbWU9Ik9BTV9SRU1PVEVfVVNFUiIgTmFtZUZvcm1hdD0idXJuOm9hc2lz&#xd;
+Om5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6&#xd;
+QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEv&#xd;
+WE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj42MDU1MjM5MDwvc2FtbDpB&#xd;
+dHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBO&#xd;
+YW1lPSJFbXBsb3llZSBJRCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRj&#xd;
+OlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRl&#xd;
+VmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1h&#xd;
+IiB4c2k6dHlwZT0ieHM6c3RyaW5nIj42MDU1MjM5MDwvc2FtbDpBdHRyaWJ1dGVW&#xd;
+YWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJlbXBs&#xd;
+b3llZUlEIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xd;
+YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxu&#xd;
+czp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBl&#xd;
+PSJ4czpzdHJpbmciPjYwNTUyMzkwPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2Ft&#xd;
+bDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9Ik9yZ2FuaXphdGlvbiBJ&#xd;
+ZCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJu&#xd;
+YW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeHNpOm5pbD0i&#xd;
+dHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9InVp&#xd;
+ZCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJu&#xd;
+YW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9&#xd;
+Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6&#xd;
+c3RyaW5nIj42MDU1MjM5MDwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0&#xd;
+cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJTVUJKRUNUX0lEIiBOYW1lRm9y&#xd;
+bWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0&#xd;
+OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3&#xd;
+dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPmNu&#xd;
+PTYwNTUyMzkwLGNuPUVtcGxveWVlcyxjbj1Vc2VycyxkYz1pZG0sZGM9amlvLGRj&#xd;
+PWNvbTwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1s&#xd;
+OkF0dHJpYnV0ZSBOYW1lPSJVU0VSTkFNRSIgTmFtZUZvcm1hdD0idXJuOm9hc2lz&#xd;
+Om5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6&#xd;
+QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEv&#xd;
+WE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj42MDU1MjM5MDwvc2FtbDpB&#xd;
+dHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBO&#xd;
+YW1lPSJlbWFpbCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6&#xd;
+Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUg&#xd;
+eG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6&#xd;
+dHlwZT0ieHM6c3RyaW5nIj5hYmNAbm9tYWlsLmNvbTwvc2FtbDpBdHRyaWJ1dGVW&#xd;
+YWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJDSVJD&#xd;
+TEVfQ09ERSIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4w&#xd;
+OmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeHNp&#xd;
+Om5pbD0idHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5h&#xd;
+bWU9InNBTUFjY291bnROYW1lIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6&#xd;
+dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1&#xd;
+dGVWYWx1ZSB4c2k6bmlsPSJ0cnVlIi8+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpB&#xd;
+dHRyaWJ1dGUgTmFtZT0iSklPX0NFTlRSRV9JRCIgTmFtZUZvcm1hdD0idXJuOm9h&#xd;
+c2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNh&#xd;
+bWw6QXR0cmlidXRlVmFsdWUgeHNpOm5pbD0idHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1&#xd;
+dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9IlVTRVJfTE9HSU4iIE5hbWVGb3JtYXQ9&#xd;
+InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFz&#xd;
+aWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3Lncz&#xd;
+Lm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+NjA1NTIz&#xd;
+OTA8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpB&#xd;
+dHRyaWJ1dGUgTmFtZT0ibW9iaWxlIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFt&#xd;
+ZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRy&#xd;
+aWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxT&#xd;
+Y2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPis5MTk4OTgyOTgyOTg8L3NhbWw6&#xd;
+QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUg&#xd;
+TmFtZT0iRW1wbG95ZWVOdW1iZXIiIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1l&#xd;
+czp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJp&#xd;
+YnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNj&#xd;
+aGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+NjA1NTIzOTA8L3NhbWw6QXR0cmli&#xd;
+dXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0i&#xd;
+REVQQVJUTUVOVCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6&#xd;
+Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUg&#xd;
+eHNpOm5pbD0idHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRl&#xd;
+IE5hbWU9IkNOIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoy&#xd;
+LjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4&#xd;
+bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0&#xd;
+eXBlPSJ4czpzdHJpbmciPjYwNTUyMzkwPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwv&#xd;
+c2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9IlVTRVJfTkFNRV9G&#xd;
+VUxMIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0&#xd;
+cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4&#xd;
+cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4&#xd;
+czpzdHJpbmciPjYwNTUyMzkwPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpB&#xd;
+dHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9Imxhc3RuYW1lIiBOYW1lRm9y&#xd;
+bWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0&#xd;
+OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3&#xd;
+dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPlBh&#xd;
+dGhhbjwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1s&#xd;
+OkF0dHJpYnV0ZSBOYW1lPSJSb2xlIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFt&#xd;
+ZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRy&#xd;
+aWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxT&#xd;
+Y2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPmNuPWZvc25ldyByb2xlLGNuPWdy&#xd;
+b3VwcyxkYz1pZG0sZGM9amlvLGRjPWNvbTwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48&#xd;
+c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcv&#xd;
+MjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPmNuPWZwY2EsY249&#xd;
+Z3JvdXBzLGRjPWlkbSxkYz1qaW8sZGM9Y29tPC9zYW1sOkF0dHJpYnV0ZVZhbHVl&#xd;
+PjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9y&#xd;
+Zy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+Y249cHJtbWFp&#xd;
+bnRhaW5kZWxhcixjbj1ncm91cHMsZGM9aWRtLGRjPWppbyxkYz1jb208L3NhbWw6&#xd;
+QXR0cmlidXRlVmFsdWU+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0&#xd;
+dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3Ry&#xd;
+aW5nIj5jbj1vdWRfdXNlcnMsY249Z3JvdXBzLGRjPWlkbSxkYz1qaW8sZGM9Y29t&#xd;
+PC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5z&#xd;
+OnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9&#xd;
+InhzOnN0cmluZyI+Y249cnJiZWF0LGNuPWdyb3VwcyxkYz1pZG0sZGM9amlvLGRj&#xd;
+PWNvbTwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4&#xd;
+bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0&#xd;
+eXBlPSJ4czpzdHJpbmciPmNuPXJwb3N1c2Vycyxjbj1ncm91cHMsZGM9aWRtLGRj&#xd;
+PWppbyxkYz1jb208L3NhbWw6QXR0cmlidXRlVmFsdWU+PHNhbWw6QXR0cmlidXRl&#xd;
+VmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1h&#xd;
+IiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5jbj1jc29jZW50cmFsLGNuPWdyb3Vwcyxk&#xd;
+Yz1pZG0sZGM9amlvLGRjPWNvbTwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6&#xd;
+QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJTVE9SRV9DT0RFIiBOYW1l&#xd;
+Rm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9y&#xd;
+bWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDov&#xd;
+L3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmci&#xd;
+Lz48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJCUElEIiBO&#xd;
+YW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUt&#xd;
+Zm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0&#xd;
+cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJp&#xd;
+bmciPjYwNTUyMzkwPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1&#xd;
+dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9Im5hbWUiIE5hbWVGb3JtYXQ9InVybjpv&#xd;
+YXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxz&#xd;
+YW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8y&#xd;
+MDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+NjA1NTIzOTA8L3Nh&#xd;
+bWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1&#xd;
+dGUgTmFtZT0iZGVzaWduYXRpb24iIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1l&#xd;
+czp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJp&#xd;
+YnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNj&#xd;
+aGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+WDQ8L3NhbWw6QXR0cmlidXRlVmFs&#xd;
+dWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iRW1wbG95&#xd;
+ZWVJRCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0&#xd;
+dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6&#xd;
+eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0i&#xd;
+eHM6c3RyaW5nIj42MDU1MjM5MDwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6&#xd;
+QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJVU0VSX1JPTEUiIE5hbWVG&#xd;
+b3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3Jt&#xd;
+YXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8v&#xd;
+d3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+&#xd;
+WDQ8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpB&#xd;
+dHRyaWJ1dGUgTmFtZT0iQWdlbnQgSWQiIE5hbWVGb3JtYXQ9InVybjpvYXNpczpu&#xd;
+YW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0&#xd;
+dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hN&#xd;
+TFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+NjA1NTIzOTA8L3NhbWw6QXR0&#xd;
+cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48L3NhbWw6QXR0cmlidXRlU3Rh&#xd;
+dGVtZW50Pjwvc2FtbDpBc3NlcnRpb24+PC9zYW1scDpSZXNwb25zZT4=&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">csoanalytics/saml/SSO</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[5]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">2056</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://csocentral.jiolabs.com/csoanalytics/partner/cso/external-credit/external-credit" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">csoanalytics/partner/cso/external-credit/external-credit</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">4617</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://csocentral.jiolabs.com/csoanalytics/partner/cso/external-credit/external-credit-dashboard-redirect" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="bankId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">bankId</stringProp>
+                  <stringProp name="Argument.value">EPAYLATER,RUPIFI,SUPERMONEY</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="csoId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">csoId</stringProp>
+                  <stringProp name="Argument.value">60552390</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="mId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">mId</stringProp>
+                  <stringProp name="Argument.value">100001000235381</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="storeName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">storeName</stringProp>
+                  <stringProp name="Argument.value">Nariman City Fresh Mart</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">csoanalytics/partner/cso/external-credit/external-credit-dashboard-redirect</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[7]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">15707</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

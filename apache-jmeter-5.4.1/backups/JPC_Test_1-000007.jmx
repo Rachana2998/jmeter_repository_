@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="JPC_Test_1" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not.A/Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;114&quot;, &quot;Google Chrome&quot;;v=&quot;114&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="BASE_URL_1" elementType="Argument">
+                <stringProp name="Argument.name">BASE_URL_1</stringProp>
+                <stringProp name="Argument.value">pcrepllica.jiolabs.com</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="BASE_URL_2" elementType="Argument">
+                <stringProp name="Argument.name">BASE_URL_2</stringProp>
+                <stringProp name="Argument.value">replogin.jiolabs.com</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="BASE_URL_3" elementType="Argument">
+                <stringProp name="Argument.name">BASE_URL_3</stringProp>
+                <stringProp name="Argument.value">pcanalytics.jiolabs.com</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </ConfigTestElement>
+          <hashTree/>
+          <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+            <collectionProp name="DNSCacheManager.servers"/>
+            <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+            <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+          </DNSCacheManager>
+          <hashTree/>
+          <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+            <collectionProp name="AuthManager.auth_list">
+              <elementProp name="" elementType="Authorization">
+                <stringProp name="Authorization.url">https://pcrepllica.jiolabs.com/pcdxp/web/partner-central</stringProp>
+                <stringProp name="Authorization.username">rachana.jadhav</stringProp>
+                <stringProp name="Authorization.password">Rachu@291003</stringProp>
+                <stringProp name="Authorization.domain"></stringProp>
+                <stringProp name="Authorization.realm"></stringProp>
+                <stringProp name="Authorization.mechanism">BASIC_DIGEST</stringProp>
+              </elementProp>
+            </collectionProp>
+            <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+            <boolProp name="AuthManager.clearEachIteration">true</boolProp>
+          </AuthManager>
+          <hashTree/>
+          <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+            <collectionProp name="CookieManager.cookies"/>
+            <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+            <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+          </CookieManager>
+          <hashTree/>
+          <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+            <boolProp name="clearEachIteration">true</boolProp>
+            <boolProp name="useExpires">false</boolProp>
+            <boolProp name="CacheManager.controlledByThread">false</boolProp>
+          </CacheManager>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <stringProp name="WebDriverConfig.proxy_type">AUTO_DETECT</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host">fpproxy.in.ril.com</stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">false</boolProp>
+            <stringProp name="WebDriverConfig.https_host">fpproxy.in.ril.com</stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <stringProp name="ChromeDriverConfig.chromedriver_path">C:\Tools\chromedriver.exe</stringProp>
+            <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.incognito_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.no_sandbox_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.disable_dev_shm_usage">false</boolProp>
+            <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+            <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="PartnerCentral-LoginPage" enabled="true">
+            <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+
+WDS.sampleResult.sampleStart();
+
+boolean go = true;
+String baseUrl = &quot;https://pcrepllica.jiolabs.com/pcdxp/web/partner-central&quot;;
+WDS.browser.get(baseUrl + &quot;/&quot;);
+Thread.sleep(2000);
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+
+
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">${__threadNum}-${loopcounter}</stringProp>
+            <stringProp name="WebDriverSampler.language">java</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="PartnerCentral_Credentials" enabled="true">
+            <stringProp name="WebDriverSampler.script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+import openqa.selenium.OutputType.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+import java.util.Random;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(By.xpath(&quot;//*[contains(text(),&apos;Sign In&apos;)]&quot;)).click();
+Thread.sleep(2000);
+
+WDS.browser.findElement(By.xpath(&quot;//*[@id=&apos;content-inner&apos;]/form/input[3]&quot;)).sendKeys(new String[] {&quot;Rachana.Jadhav&quot;});
+Thread.sleep(2000);
+WDS.browser.findElement(By.xpath(&quot;//*[@id=&apos;content-inner&apos;]/form/input[4]&quot;)).sendKeys( new String[] { &quot;Rachu@291003&quot;});
+Thread.sleep(2000);
+WDS.browser.findElement(By.xpath(&quot;//*[@id=&apos;content-inner&apos;]/form/input[5]&quot;)).click();
+Thread.sleep(2000);
+
+
+
+Random r = new Random();
+if ( r.nextInt(2) == 0 ){
+ File mFile = ((TakesScreenshot)WDS.browser).getScreenshotAs(OutputType.FILE);
+ FileUtils.copyFile(mFile, new File(&quot;C:/full backup/screenshotsjmeter/&quot; + WDS.name + &quot;-&quot; + WDS.parameters + &quot;.png&quot;));
+}
+
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">${username}</stringProp>
+            <stringProp name="WebDriverSampler.language">java</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcrepllica.jiolabs.com/pcdxp/c/portal/login?p_l_id=109" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="p_l_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">p_l_id</stringProp>
+                  <stringProp name="Argument.value">109</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">pcdxp/c/portal/login</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://replogin.jiolabs.com/oamfed/idp/samlv20" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="RelayState" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">RelayState</stringProp>
+                  <stringProp name="Argument.value">https://pcrepllica.jiolabs.com/pcdxp/web/partner-central</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="SAMLRequest" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SAMLRequest</stringProp>
+                  <stringProp name="Argument.value">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c2FtbDJwOkF1dGhuUmVxdWVzdCB4bWxuczpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCIgQXNzZXJ0aW9uQ29uc3VtZXJTZXJ2aWNlVVJMPSJodHRwczovL3BjcmVwbGxpY2EuamlvbGFicy5jb20vcGNkeHAvYy9wb3J0YWwvc2FtbC9hY3MiIERlc3RpbmF0aW9uPSJodHRwczovL3JlcGxvZ2luLmppb2xhYnMuY29tL29hbWZlZC9pZHAvc2FtbHYyMCIgRm9yY2VBdXRobj0iZmFsc2UiIElEPSJfZGYxMmQ2OGRhMzU0YjNmYjdmMzlmZWE4NjdlMTEwM2E2ZDE3NDdlMCIgSXNQYXNzaXZlPSJmYWxzZSIgSXNzdWVJbnN0YW50PSIyMDI0LTAzLTE0VDA2OjA5OjQ4LjU2MloiIFByb3RvY29sQmluZGluZz0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmJpbmRpbmdzOkhUVFAtUE9TVCIgVmVyc2lvbj0iMi4wIj48c2FtbDI6SXNzdWVyIHhtbG5zOnNhbWwyPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5wY2R4cHJlcGxpY2E8L3NhbWwyOklzc3Vlcj48c2FtbDJwOk5hbWVJRFBvbGljeSBBbGxvd0NyZWF0ZT0idHJ1ZSIgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmllZCIvPjwvc2FtbDJwOkF1dGhuUmVxdWVzdD4=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">oamfed/idp/samlv20</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">151</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://replogin.jiolabs.com/oam/server/auth_cred_submit" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">Rachu@291003</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="resource_url" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">resource_url</stringProp>
+                  <stringProp name="Argument.value">%252Fuser%252Floginsso</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="request_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">request_id</stringProp>
+                  <stringProp name="Argument.value">7573000863902005100</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">rachana.jadhav</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">oam/server/auth_cred_submit</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">17274</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcrepllica.jiolabs.com/pcdxp/c/portal/saml/acs" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="RelayState" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">RelayState</stringProp>
+                  <stringProp name="Argument.value">https://pcrepllica.jiolabs.com/pcdxp/web/partner-central</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="SAMLResponse" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SAMLResponse</stringProp>
+                  <stringProp name="Argument.value">PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6cHJvdG9jb2wiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcv&#xd;
+MjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIERlc3RpbmF0aW9uPSJodHRwczovL3Bj&#xd;
+cmVwbGxpY2EuamlvbGFicy5jb20vcGNkeHAvYy9wb3J0YWwvc2FtbC9hY3MiIElE&#xd;
+PSJpZC1USnNQdXEtc1BYQ2RrU0RzNDZOcHJMaWkwNWQxRzdVR1A5bmFZdEtxIiBJ&#xd;
+blJlc3BvbnNlVG89Il9kZjEyZDY4ZGEzNTRiM2ZiN2YzOWZlYTg2N2UxMTAzYTZk&#xd;
+MTc0N2UwIiBJc3N1ZUluc3RhbnQ9IjIwMjQtMDMtMTRUMDY6MTA6MDZaIiBWZXJz&#xd;
+aW9uPSIyLjAiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFt&#xd;
+ZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIiBGb3JtYXQ9InVybjpvYXNpczpuYW1l&#xd;
+czp0YzpTQU1MOjIuMDpuYW1laWQtZm9ybWF0OmVudGl0eSI+aHR0cHM6Ly9yZXBs&#xd;
+b2dpbi5qaW9sYWJzLmNvbS9vYW0vZmVkPC9zYW1sOklzc3Vlcj48ZHNpZzpTaWdu&#xd;
+YXR1cmUgeG1sbnM6ZHNpZz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxk&#xd;
+c2lnIyI+PGRzaWc6U2lnbmVkSW5mbz48ZHNpZzpDYW5vbmljYWxpemF0aW9uTWV0&#xd;
+aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhj&#xd;
+LWMxNG4jIi8+PGRzaWc6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDov&#xd;
+L3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3JzYS1zaGExIi8+PGRzaWc6UmVm&#xd;
+ZXJlbmNlIFVSST0iI2lkLVRKc1B1cS1zUFhDZGtTRHM0Nk5wckxpaTA1ZDFHN1VH&#xd;
+UDluYVl0S3EiPjxkc2lnOlRyYW5zZm9ybXM+PGRzaWc6VHJhbnNmb3JtIEFsZ29y&#xd;
+aXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3Bl&#xd;
+ZC1zaWduYXR1cmUiLz48ZHNpZzpUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8v&#xd;
+d3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiLz48L2RzaWc6VHJhbnNm&#xd;
+b3Jtcz48ZHNpZzpEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3Lncz&#xd;
+Lm9yZy8yMDAwLzA5L3htbGRzaWcjc2hhMSIvPjxkc2lnOkRpZ2VzdFZhbHVlPmpV&#xd;
+SXZzWmRHZnJMMlBGcnNnYWcwK2ZvdWcyVT08L2RzaWc6RGlnZXN0VmFsdWU+PC9k&#xd;
+c2lnOlJlZmVyZW5jZT48L2RzaWc6U2lnbmVkSW5mbz48ZHNpZzpTaWduYXR1cmVW&#xd;
+YWx1ZT5QeTMxSGtEOEN2Vkx0RFFsWmV5V2tKRFNQU0FFQTQ4aFp5OVh5Sm8vMlUw&#xd;
+RmkrUEtzQjFxRFByQjRiT1RZM3BHCmV0WjdET0I0YjRvaTRydTBuMTV2VzhtR0ts&#xd;
+bHIxSURhUFhFR3ZZemlpa2I4OUo3VlQvbFowVUZkb0FRVjUzNkoKMGVpZ2NPQmN3&#xd;
+U3E3dkZweUZnZ0Z3a1ZzeWhvdXRKY3NaVktRSWNUbGV5NGQ2SnpHTllBWjNYajdu&#xd;
+QVJyekg5Mgpwa0R3cE5QT3ZNbk5kalR4RkdvMW12bi84aUl1WCt4VjcrYXlKb0s2&#xd;
+bUlGV1ZGVWZ0c1U1Vml2L1B5ckNlbEdNCnNJdTI4aHc5RDFZQXF4Y09LYXgzVHVj&#xd;
+by9zaTNaMlVuQXNQNkdkekIvb0wzdXlBRDBKN0tuYVFweCtsTjlGWHIKRTlmeDVI&#xd;
+YUF6L3pwaklVay8vQ2QyZz09PC9kc2lnOlNpZ25hdHVyZVZhbHVlPjwvZHNpZzpT&#xd;
+aWduYXR1cmU+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0i&#xd;
+dXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9z&#xd;
+YW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIHhtbG5zOnNhbWw9InVybjpvYXNp&#xd;
+czpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iIElEPSJpZC1PUDhkWExCak42&#xd;
+WkVHa1owQWtJR3dpSm9YanhSR2RpM0liOXQzY1duIiBJc3N1ZUluc3RhbnQ9IjIw&#xd;
+MjQtMDMtMTRUMDY6MTA6MDZaIiBWZXJzaW9uPSIyLjAiPjxzYW1sOklzc3VlciBG&#xd;
+b3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpuYW1laWQtZm9ybWF0&#xd;
+OmVudGl0eSI+aHR0cHM6Ly9yZXBsb2dpbi5qaW9sYWJzLmNvbS9vYW0vZmVkPC9z&#xd;
+YW1sOklzc3Vlcj48ZHNpZzpTaWduYXR1cmUgeG1sbnM6ZHNpZz0iaHR0cDovL3d3&#xd;
+dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+PGRzaWc6U2lnbmVkSW5mbz48ZHNp&#xd;
+ZzpDYW5vbmljYWxpemF0aW9uTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53&#xd;
+My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIi8+PGRzaWc6U2lnbmF0dXJlTWV0&#xd;
+aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2ln&#xd;
+I3JzYS1zaGExIi8+PGRzaWc6UmVmZXJlbmNlIFVSST0iI2lkLU9QOGRYTEJqTjZa&#xd;
+RUdrWjBBa0lHd2lKb1hqeFJHZGkzSWI5dDNjV24iPjxkc2lnOlRyYW5zZm9ybXM+&#xd;
+PGRzaWc6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAw&#xd;
+MC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz48ZHNpZzpUcmFuc2Zv&#xd;
+cm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMt&#xd;
+YzE0biMiLz48L2RzaWc6VHJhbnNmb3Jtcz48ZHNpZzpEaWdlc3RNZXRob2QgQWxn&#xd;
+b3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjc2hhMSIv&#xd;
+Pjxkc2lnOkRpZ2VzdFZhbHVlPjVTZlA3aFp3c3E3MjcwcFE4MFI5NXVmVHNyST08&#xd;
+L2RzaWc6RGlnZXN0VmFsdWU+PC9kc2lnOlJlZmVyZW5jZT48L2RzaWc6U2lnbmVk&#xd;
+SW5mbz48ZHNpZzpTaWduYXR1cmVWYWx1ZT5yZ0VLRTcralJRaXJxWVRjY0RkdS9F&#xd;
+dCtraXFuMXlJSjNjK3ozcGxIZ3BBV0xzTnRSdnJKK3dxOEZSeGhnTjdiCkp0bjZO&#xd;
+aHVzYi9aaTlCNjlXSkNXbFlXZjVzWmlJTkdHNUh6QzR0a3lycnUwZWdMM1grSmps&#xd;
+V05iVGI0TUpRUk4KWFRsOGQ3VU5YcVVYMm15ZmYwaXcrcmY1S0VJcDlmaGtGbDNm&#xd;
+VWpwcWZiM0dzRExlN1YxWWh1ZDFWdi83TnFLOQpIUytHc1FWTGZEcXFmWk1EVXRo&#xd;
+SWx5bVZvREdtZTZnTVE3bHJockkrV0J3TktNTFhxejk5QmpCSTRHMCsvVG5BCmpU&#xd;
+LzVOSFU1QkpYU3JYWUlvRlFnUjU4Vnd0T0UvZU94VVpJWVVOdTF1eHpGTG5Sbk95&#xd;
+YVBLNHV2NjFDK2ZEQk8KeTRDdmJ4R1Irb3BDdEg0ZHZZQlRSZz09PC9kc2lnOlNp&#xd;
+Z25hdHVyZVZhbHVlPjwvZHNpZzpTaWduYXR1cmU+PHNhbWw6U3ViamVjdD48c2Ft&#xd;
+bDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFt&#xd;
+ZWlkLWZvcm1hdDp1bnNwZWNpZmllZCI+UmFjaGFuYS5KYWRoYXY8L3NhbWw6TmFt&#xd;
+ZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6&#xd;
+bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmly&#xd;
+bWF0aW9uRGF0YSBJblJlc3BvbnNlVG89Il9kZjEyZDY4ZGEzNTRiM2ZiN2YzOWZl&#xd;
+YTg2N2UxMTAzYTZkMTc0N2UwIiBOb3RPbk9yQWZ0ZXI9IjIwMjQtMDMtMTRUMDY6&#xd;
+MTU6MDZaIiBSZWNpcGllbnQ9Imh0dHBzOi8vcGNyZXBsbGljYS5qaW9sYWJzLmNv&#xd;
+bS9wY2R4cC9jL3BvcnRhbC9zYW1sL2FjcyIvPjwvc2FtbDpTdWJqZWN0Q29uZmly&#xd;
+bWF0aW9uPjwvc2FtbDpTdWJqZWN0PjxzYW1sOkNvbmRpdGlvbnMgTm90QmVmb3Jl&#xd;
+PSIyMDI0LTAzLTE0VDA2OjEwOjA2WiIgTm90T25PckFmdGVyPSIyMDI0LTAzLTE0&#xd;
+VDA2OjE1OjA2WiI+PHNhbWw6QXVkaWVuY2VSZXN0cmljdGlvbj48c2FtbDpBdWRp&#xd;
+ZW5jZT5wY2R4cHJlcGxpY2E8L3NhbWw6QXVkaWVuY2U+PC9zYW1sOkF1ZGllbmNl&#xd;
+UmVzdHJpY3Rpb24+PC9zYW1sOkNvbmRpdGlvbnM+PHNhbWw6QXV0aG5TdGF0ZW1l&#xd;
+bnQgQXV0aG5JbnN0YW50PSIyMDI0LTAzLTE0VDA2OjEwOjA2WiIgU2Vzc2lvbklu&#xd;
+ZGV4PSJpZC0yU0VXNmdRSnYzSG5odWpYZklaaTNmNUMtSy1jWGN3c1QzVGNaLVQ2&#xd;
+IiBTZXNzaW9uTm90T25PckFmdGVyPSIyMDI0LTAzLTE0VDA3OjEwOjA2WiI+PHNh&#xd;
+bWw6QXV0aG5Db250ZXh0PjxzYW1sOkF1dGhuQ29udGV4dENsYXNzUmVmPnVybjpv&#xd;
+YXNpczpuYW1lczp0YzpTQU1MOjIuMDphYzpjbGFzc2VzOlBhc3N3b3JkUHJvdGVj&#xd;
+dGVkVHJhbnNwb3J0PC9zYW1sOkF1dGhuQ29udGV4dENsYXNzUmVmPjwvc2FtbDpB&#xd;
+dXRobkNvbnRleHQ+PC9zYW1sOkF1dGhuU3RhdGVtZW50PjxzYW1sOkF0dHJpYnV0&#xd;
+ZVN0YXRlbWVudD48c2FtbDpBdHRyaWJ1dGUgTmFtZT0ibGFzdE5hbWUiIE5hbWVG&#xd;
+b3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3Jt&#xd;
+YXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8v&#xd;
+d3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+&#xd;
+SmFkaGF2PC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNh&#xd;
+bWw6QXR0cmlidXRlIE5hbWU9ImZpcnN0bmFtZSIgTmFtZUZvcm1hdD0idXJuOm9h&#xd;
+c2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNh&#xd;
+bWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIw&#xd;
+MDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5SYWNoYW5hPC9zYW1s&#xd;
+OkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRl&#xd;
+IE5hbWU9IlVTRVJOQU1FIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVW&#xd;
+YWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEi&#xd;
+IHhzaTp0eXBlPSJ4czpzdHJpbmciPlJhY2hhbmEuSmFkaGF2PC9zYW1sOkF0dHJp&#xd;
+YnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9&#xd;
+ImVtYWlsIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xd;
+YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxu&#xd;
+czp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBl&#xd;
+PSJ4czpzdHJpbmciPlJhY2hhbmEuSmFkaGF2QHJpbC5jb208L3NhbWw6QXR0cmli&#xd;
+dXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48L3NhbWw6QXR0cmlidXRlU3RhdGVt&#xd;
+ZW50Pjwvc2FtbDpBc3NlcnRpb24+PC9zYW1scDpSZXNwb25zZT4=&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">pcdxp/c/portal/saml/acs</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">259</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/?token=VLOrogEuCWKAi0eD1chgMbDzpo33fXAPY%2BRHMd%2FjMf7ugoAEH4ZO%2BOB3ET5E8la0ithgnmTuJ5UKXQVXKGXCXg%3D%3D" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="token" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">token</stringProp>
+                  <stringProp name="Argument.value">VLOrogEuCWKAi0eD1chgMbDzpo33fXAPY+RHMd/jMf7ugoAEH4ZO+OB3ET5E8la0ithgnmTuJ5UKXQVXKGXCXg==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">12074</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://replogin.jiolabs.com/oamfed/idp/samlv20" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="SAMLRequest" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SAMLRequest</stringProp>
+                  <stringProp name="Argument.value">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c2FtbDJwOkF1dGhuUmVxdWVzdCB4bWxuczpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCIgQXNzZXJ0aW9uQ29uc3VtZXJTZXJ2aWNlVVJMPSJodHRwczovL3BjYW5hbHl0aWNzLmppb2xhYnMuY29tOjQ0My9zYW1sL1NTTyIgRGVzdGluYXRpb249Imh0dHBzOi8vcmVwbG9naW4uamlvbGFicy5jb20vb2FtZmVkL2lkcC9zYW1sdjIwIiBGb3JjZUF1dGhuPSJmYWxzZSIgSUQ9ImEyZzc3aGg3MzRqZDRpZjMzZjJlMTEzY2lmZGo0ZTAiIElzUGFzc2l2ZT0iZmFsc2UiIElzc3VlSW5zdGFudD0iMjAyNC0wMy0xNFQwNjoxMDoxOC40MTlaIiBQcm90b2NvbEJpbmRpbmc9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpiaW5kaW5nczpIVFRQLVBPU1QiIFZlcnNpb249IjIuMCI+PHNhbWwyOklzc3VlciB4bWxuczpzYW1sMj0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+dXJuOnRlc3Q6amlvOm11bWJhaTwvc2FtbDI6SXNzdWVyPjxkczpTaWduYXR1cmUgeG1sbnM6ZHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPjxkczpTaWduZWRJbmZvPjxkczpDYW5vbmljYWxpemF0aW9uTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIi8+PGRzOlNpZ25hdHVyZU1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNyc2Etc2hhMSIvPjxkczpSZWZlcmVuY2UgVVJJPSIjYTJnNzdoaDczNGpkNGlmMzNmMmUxMTNjaWZkajRlMCI+PGRzOlRyYW5zZm9ybXM+PGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIi8+PGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGlnZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3NoYTEiLz48ZHM6RGlnZXN0VmFsdWU+VUI1WE9LMUNCQkFCVG8rZkM4emZlODdSNmxrPTwvZHM6RGlnZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PC9kczpTaWduZWRJbmZvPjxkczpTaWduYXR1cmVWYWx1ZT5mSFBBSVNtcDZPM3RTNzBwSHlPME1acnJWZk5OQ202azhuVllNUjcxSDNxTHZIVW9udkttMGJ5MitaK1VSaTVseDZ4ZHVSQjI2c1lkdUN4ejNseFA4NzZ4WUh3V1BhSERoZEUrM2xuOG1aaWx5ZDZ4eUxQcTVYaFpNWFg3TXhaVWZnRFd3Q2lCenJtaWdmU0NxWVpBT2srNmZDWjJndXRodHVNUFFaN3NFd2dha1I3a2NISVprcnNtcE51SGxJRDQ5Tjcrd29DN1RYTTNPNEEvc2UvemxUTnZYNXFhbW5oeFd5eG0zYXlhMGp1QUdJdFpTYnZSMnlhN3hLWDN3OUpEcXBIYzFkSzY2cXNGdERKaG5rTE5JMG9VQjM4S2pLdFFtZU5vdUJ3TUdmcXAweGlpclVyZ0Z6cHRWVi85c2xaQTRYV000VTM0N0ZWN04yMVRUZk5hMnc9PTwvZHM6U2lnbmF0dXJlVmFsdWU+PGRzOktleUluZm8+PGRzOlg1MDlEYXRhPjxkczpYNTA5Q2VydGlmaWNhdGU+TUlJRFVqQ0NBanFnQXdJQkFnSUVVT0xJUVRBTkJna3Foa2lHOXcwQkFRVUZBREJyTVFzd0NRWURWUVFHRXdKR1NURVFNQTRHQTFVRQpDQk1IVlhWemFXMWhZVEVSTUE4R0ExVUVCeE1JU0dWc2MybHVhMmt4R0RBV0JnTlZCQW9URDFKTk5TQlRiMlowZDJGeVpTQlBlVEVNCk1Bb0dBMVVFQ3d3RFVpWkVNUTh3RFFZRFZRUURFd1poY0c5c2JHOHdIaGNOTVRNd01UQXhNVEV5T0RBeFdoY05Nakl4TWpNd01URXkKT0RBeFdqQnJNUXN3Q1FZRFZRUUdFd0pHU1RFUU1BNEdBMVVFQ0JNSFZYVnphVzFoWVRFUk1BOEdBMVVFQnhNSVNHVnNjMmx1YTJreApHREFXQmdOVkJBb1REMUpOTlNCVGIyWjBkMkZ5WlNCUGVURU1NQW9HQTFVRUN3d0RVaVpFTVE4d0RRWURWUVFERXdaaGNHOXNiRzh3CmdnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUNYcVAwd3FMMkFpMWhhZVRqMGFsd3NMYWZockR0VXQwMEUKNXhjN2tkRDdQSVNSQTI3MFptcFlNQjRXMjRVazJRa3V3YUJwNmRJL3lSZFV2UGZPVDQ1WVpycUl4TWUyNDUxUEFRV3RFS1dGNVoxMwpGMEo0L2xCNzFUdHJ6eUg5NFJucVNIWEZmdlJOOEVZL3J6dUV6cnBackhkdE5zOUxSeUxxY1JUWE1NTzR6N1FnaEJ1eGgzSzVndTdLCnF4cEh4Nk5vODNXTlpqNEIzZ3ZXTFJXdjA1bmJYaC9GOVlNZVFDbFRYMWlCTkFoTFF4V2h3WE1LQjR1MWlQUS9LU2FhbDNSMjZwT04KVVVtdTFxVnRVMXF1UW96U1RQRDhIdnNEcUdHMTl2MisvTjN1ZjVkUll0dkVQZndYTjN3SVkrL1I5M3ZCQTZsbmw1blRjdFpJUnN5ZwowR3Y1QWdNQkFBRXdEUVlKS29aSWh2Y05BUUVGQlFBRGdnRUJBRlF3QUFZVWpzbzFWd2pEYzJreXBLL1JSY0I4Yk1BVVVJRzBoTEdMCjgySXZuS291R2l4R3FBY1VMd1FLSXZUczZ1R21sZ2JTRzZHbjVST2IybWxCenRYcVE0OXpSdmk1cVdOUnR0aXI2ZXlxd1JGR09NNkEKOHJ4ajNKaHhpMlZiL01KbjdYemVWSEhMekExc1Y1aHdsLzJQTG5hTDJoOVd5RzlRd0Jid3Rta01FcVV0L2RnaXhLYjFSdmJ5L3RCdQpSb2dXZ1BPTk5TQUNpVytaNW84VWRBT3FOTVpRb3pEL2kxZ09qQlhvRjBGNU9rc2pRTjd4b1FaTGo5eFhlZnhDRlE2OUZQY0ZEZUVXCmJId1NvQnk1aExQTkFMYUVVb2E1elBEd2xpeHdSakZRVGM1WFhhUnBnSWp5LzJnc0w4K1k1UVJoeVhuTHFnTzY3QmxMWVcvR3VIRT08L2RzOlg1MDlDZXJ0aWZpY2F0ZT48L2RzOlg1MDlEYXRhPjwvZHM6S2V5SW5mbz48L2RzOlNpZ25hdHVyZT48L3NhbWwycDpBdXRoblJlcXVlc3Q+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">oamfed/idp/samlv20</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">504</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/saml/SSO" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="SAMLResponse" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SAMLResponse</stringProp>
+                  <stringProp name="Argument.value">PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6cHJvdG9jb2wiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcv&#xd;
+MjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIERlc3RpbmF0aW9uPSJodHRwczovL3Bj&#xd;
+YW5hbHl0aWNzLmppb2xhYnMuY29tOjQ0My9zYW1sL1NTTyIgSUQ9ImlkLWM5aHdG&#xd;
+ZjlUSDZYMHdmWHgyOFU1WW5taks0Wmp0LTVOaWpqU3BkOUoiIEluUmVzcG9uc2VU&#xd;
+bz0iYTJnNzdoaDczNGpkNGlmMzNmMmUxMTNjaWZkajRlMCIgSXNzdWVJbnN0YW50&#xd;
+PSIyMDI0LTAzLTE0VDA2OjEwOjIwWiIgVmVyc2lvbj0iMi4wIj48c2FtbDpJc3N1&#xd;
+ZXIgeG1sbnM6c2FtbD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2Vy&#xd;
+dGlvbiIgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlk&#xd;
+LWZvcm1hdDplbnRpdHkiPmh0dHBzOi8vcmVwbG9naW4uamlvbGFicy5jb20vb2Ft&#xd;
+L2ZlZDwvc2FtbDpJc3N1ZXI+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29k&#xd;
+ZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNj&#xd;
+ZXNzIi8+PC9zYW1scDpTdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIHhtbG5zOnNhbWw9&#xd;
+InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iIElEPSJpZC03&#xd;
+SkxqYm9FWG1oRjlTQkhYTE5zSFVtTUNrelQzbmFhLWRYay1tY0M0IiBJc3N1ZUlu&#xd;
+c3RhbnQ9IjIwMjQtMDMtMTRUMDY6MTA6MjBaIiBWZXJzaW9uPSIyLjAiPjxzYW1s&#xd;
+Oklzc3VlciBGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpuYW1l&#xd;
+aWQtZm9ybWF0OmVudGl0eSI+aHR0cHM6Ly9yZXBsb2dpbi5qaW9sYWJzLmNvbS9v&#xd;
+YW0vZmVkPC9zYW1sOklzc3Vlcj48ZHNpZzpTaWduYXR1cmUgeG1sbnM6ZHNpZz0i&#xd;
+aHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+PGRzaWc6U2lnbmVk&#xd;
+SW5mbz48ZHNpZzpDYW5vbmljYWxpemF0aW9uTWV0aG9kIEFsZ29yaXRobT0iaHR0&#xd;
+cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIi8+PGRzaWc6U2ln&#xd;
+bmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8w&#xd;
+OS94bWxkc2lnI3JzYS1zaGExIi8+PGRzaWc6UmVmZXJlbmNlIFVSST0iI2lkLTdK&#xd;
+TGpib0VYbWhGOVNCSFhMTnNIVW1NQ2t6VDNuYWEtZFhrLW1jQzQiPjxkc2lnOlRy&#xd;
+YW5zZm9ybXM+PGRzaWc6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53&#xd;
+My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz48ZHNp&#xd;
+ZzpUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEw&#xd;
+L3htbC1leGMtYzE0biMiLz48L2RzaWc6VHJhbnNmb3Jtcz48ZHNpZzpEaWdlc3RN&#xd;
+ZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRz&#xd;
+aWcjc2hhMSIvPjxkc2lnOkRpZ2VzdFZhbHVlPjBvNVZWdDJ6dzNVU25vaWtHUEdP&#xd;
+d2E1SFBuYz08L2RzaWc6RGlnZXN0VmFsdWU+PC9kc2lnOlJlZmVyZW5jZT48L2Rz&#xd;
+aWc6U2lnbmVkSW5mbz48ZHNpZzpTaWduYXR1cmVWYWx1ZT5zdS92OVErcWdlb1Qv&#xd;
+ZXBzOExETncrcmh4TzhscTdobmQxR1ppNHk3NlJ5Q04yRUVldW84eG5tVFNSait3&#xd;
+VFNmCkZ4N05RVk1TQzF3aHJOblYwTG80UGNCc3dmSlJTQmZUNmhZN05QTFZsUS9D&#xd;
+ZHJ3VWN4WSswb3owa1RaeC9FaEIKWjJsT2JwWE92bTF0RTAxS1JTODQ5SXRsZ3du&#xd;
+ZmpKS1ZWV0prZkZzMTFGbzAvby9KcXM3N2NmbW5xQ0V3RGt1LwpvVmZBMnZLV0Vi&#xd;
+bUY3NmhYd0pvc2J4V0FpOVpoYzBCNWdaVFE0b2pSeWxTbWViNkszMmkxZzdZdy92&#xd;
+aGZQcFUyCnlGSGdtcWY1NGhHMVJmN0hwaWFkdVZrSG5WeTlPNklNMlBTY3M4SUJH&#xd;
+dFNJWEZCd3hQZFUxeHJyVTJQYTZTQ3cKc2RyN21xZUZkM2xsdlROSzdtbHppQT09&#xd;
+PC9kc2lnOlNpZ25hdHVyZVZhbHVlPjwvZHNpZzpTaWduYXR1cmU+PHNhbWw6U3Vi&#xd;
+amVjdD48c2FtbDpOYW1lSUQgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FN&#xd;
+TDoxLjE6bmFtZWlkLWZvcm1hdDplbWFpbEFkZHJlc3MiPlJhY2hhbmEuSmFkaGF2&#xd;
+PC9zYW1sOk5hbWVJRD48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uIE1ldGhvZD0i&#xd;
+dXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmNtOmJlYXJlciI+PHNhbWw6U3Vi&#xd;
+amVjdENvbmZpcm1hdGlvbkRhdGEgSW5SZXNwb25zZVRvPSJhMmc3N2hoNzM0amQ0&#xd;
+aWYzM2YyZTExM2NpZmRqNGUwIiBOb3RPbk9yQWZ0ZXI9IjIwMjQtMDMtMTRUMDY6&#xd;
+MTU6MjBaIiBSZWNpcGllbnQ9Imh0dHBzOi8vcGNhbmFseXRpY3MuamlvbGFicy5j&#xd;
+b206NDQzL3NhbWwvU1NPIi8+PC9zYW1sOlN1YmplY3RDb25maXJtYXRpb24+PC9z&#xd;
+YW1sOlN1YmplY3Q+PHNhbWw6Q29uZGl0aW9ucyBOb3RCZWZvcmU9IjIwMjQtMDMt&#xd;
+MTRUMDY6MTA6MjBaIiBOb3RPbk9yQWZ0ZXI9IjIwMjQtMDMtMTRUMDY6MTU6MjBa&#xd;
+Ij48c2FtbDpBdWRpZW5jZVJlc3RyaWN0aW9uPjxzYW1sOkF1ZGllbmNlPnVybjp0&#xd;
+ZXN0OmppbzptdW1iYWk8L3NhbWw6QXVkaWVuY2U+PC9zYW1sOkF1ZGllbmNlUmVz&#xd;
+dHJpY3Rpb24+PC9zYW1sOkNvbmRpdGlvbnM+PHNhbWw6QXV0aG5TdGF0ZW1lbnQg&#xd;
+QXV0aG5JbnN0YW50PSIyMDI0LTAzLTE0VDA2OjEwOjA2WiIgU2Vzc2lvbkluZGV4&#xd;
+PSJpZC0yU0VXNmdRSnYzSG5odWpYZklaaTNmNUMtSy1jWGN3c1QzVGNaLVQ2IiBT&#xd;
+ZXNzaW9uTm90T25PckFmdGVyPSIyMDI0LTAzLTE0VDA3OjEwOjIwWiI+PHNhbWw6&#xd;
+QXV0aG5Db250ZXh0PjxzYW1sOkF1dGhuQ29udGV4dENsYXNzUmVmPnVybjpvYXNp&#xd;
+czpuYW1lczp0YzpTQU1MOjIuMDphYzpjbGFzc2VzOlBhc3N3b3JkUHJvdGVjdGVk&#xd;
+VHJhbnNwb3J0PC9zYW1sOkF1dGhuQ29udGV4dENsYXNzUmVmPjwvc2FtbDpBdXRo&#xd;
+bkNvbnRleHQ+PC9zYW1sOkF1dGhuU3RhdGVtZW50PjxzYW1sOkF0dHJpYnV0ZVN0&#xd;
+YXRlbWVudD48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iRW1haWxJRCIgTmFtZUZvcm1h&#xd;
+dD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpi&#xd;
+YXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cu&#xd;
+dzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5SYWNo&#xd;
+YW5hLkphZGhhdkByaWwuY29tPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpB&#xd;
+dHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9ImZpcnN0bmFtZSIgTmFtZUZv&#xd;
+cm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1h&#xd;
+dDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93&#xd;
+d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5S&#xd;
+YWNoYW5hPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNh&#xd;
+bWw6QXR0cmlidXRlIE5hbWU9Im1haWwiIE5hbWVGb3JtYXQ9InVybjpvYXNpczpu&#xd;
+YW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0&#xd;
+dHJpYnV0ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hN&#xd;
+TFNjaGVtYSIgeHNpOnR5cGU9InhzOnN0cmluZyI+UmFjaGFuYS5KYWRoYXZAcmls&#xd;
+LmNvbTwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1s&#xd;
+OkF0dHJpYnV0ZSBOYW1lPSJPQU1fUkVNT1RFX1VTRVIiIE5hbWVGb3JtYXQ9InVy&#xd;
+bjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMi&#xd;
+PjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhzaTpuaWw9InRydWUiLz48L3NhbWw6QXR0&#xd;
+cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJFbXBsb3llZSBJRCIgTmFtZUZv&#xd;
+cm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1h&#xd;
+dDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93&#xd;
+d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5Q&#xd;
+NTUwNDM5MTM8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48&#xd;
+c2FtbDpBdHRyaWJ1dGUgTmFtZT0iZW1wbG95ZWVJRCIgTmFtZUZvcm1hdD0idXJu&#xd;
+Om9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+&#xd;
+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3Jn&#xd;
+LzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5QNTUwNDM5MTM8&#xd;
+L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRy&#xd;
+aWJ1dGUgTmFtZT0iT3JnYW5pemF0aW9uIElkIiBOYW1lRm9ybWF0PSJ1cm46b2Fz&#xd;
+aXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2Ft&#xd;
+bDpBdHRyaWJ1dGVWYWx1ZSB4c2k6bmlsPSJ0cnVlIi8+PC9zYW1sOkF0dHJpYnV0&#xd;
+ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0idWlkIiBOYW1lRm9ybWF0PSJ1cm46b2Fz&#xd;
+aXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2Ft&#xd;
+bDpBdHRyaWJ1dGVWYWx1ZSB4c2k6bmlsPSJ0cnVlIi8+PC9zYW1sOkF0dHJpYnV0&#xd;
+ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iU1VCSkVDVF9JRCIgTmFtZUZvcm1hdD0i&#xd;
+dXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNp&#xd;
+YyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMu&#xd;
+b3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5DTj1SYWNo&#xd;
+YW5hLkphZGhhdixPVT1GVEUsT1U9VVNFUlMsT1U9Q09SUE9SQVRFLE9VPVJFTElB&#xd;
+TkNFIEpJTyxkYz1pbixkYz1yaWwsZGM9Y29tPC9zYW1sOkF0dHJpYnV0ZVZhbHVl&#xd;
+Pjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9IlVTRVJOQU1F&#xd;
+IiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5h&#xd;
+bWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0i&#xd;
+aHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpz&#xd;
+dHJpbmciPlJhY2hhbmEuSmFkaGF2PC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2Ft&#xd;
+bDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9ImVtYWlsIiBOYW1lRm9y&#xd;
+bWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0&#xd;
+OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3&#xd;
+dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPlJh&#xd;
+Y2hhbmEuSmFkaGF2QHJpbC5jb208L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1s&#xd;
+OkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iQ0lSQ0xFX0NPREUiIE5h&#xd;
+bWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1m&#xd;
+b3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhzaTpuaWw9InRydWUi&#xd;
+Lz48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJzQU1BY2Nv&#xd;
+dW50TmFtZSIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4w&#xd;
+OmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeG1s&#xd;
+bnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4c2k6dHlw&#xd;
+ZT0ieHM6c3RyaW5nIj5SYWNoYW5hLkphZGhhdjwvc2FtbDpBdHRyaWJ1dGVWYWx1&#xd;
+ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJKSU9fQ0VO&#xd;
+VFJFX0lEIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xd;
+YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4c2k6&#xd;
+bmlsPSJ0cnVlIi8+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFt&#xd;
+ZT0iVVNFUl9MT0dJTiIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNB&#xd;
+TUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFs&#xd;
+dWUgeHNpOm5pbD0idHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmli&#xd;
+dXRlIE5hbWU9Im1vYmlsZSIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRj&#xd;
+OlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRl&#xd;
+VmFsdWUgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1h&#xd;
+IiB4c2k6dHlwZT0ieHM6c3RyaW5nIj4rOTE4MzY5NDMyODY0PC9zYW1sOkF0dHJp&#xd;
+YnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9&#xd;
+IkVtcGxveWVlTnVtYmVyIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVW&#xd;
+YWx1ZSB4c2k6bmlsPSJ0cnVlIi8+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRy&#xd;
+aWJ1dGUgTmFtZT0iREVQQVJUTUVOVCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5h&#xd;
+bWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0&#xd;
+cmlidXRlVmFsdWUgeHNpOm5pbD0idHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1dGU+PHNh&#xd;
+bWw6QXR0cmlidXRlIE5hbWU9IkNOIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFt&#xd;
+ZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRy&#xd;
+aWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxT&#xd;
+Y2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPlJhY2hhbmEuSmFkaGF2PC9zYW1s&#xd;
+OkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRl&#xd;
+IE5hbWU9IlVTRVJfTkFNRV9GVUxMIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFt&#xd;
+ZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRy&#xd;
+aWJ1dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxT&#xd;
+Y2hlbWEiIHhzaTp0eXBlPSJ4czpzdHJpbmciPlJhY2hhbmEuSmFkaGF2PC9zYW1s&#xd;
+OkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRl&#xd;
+IE5hbWU9Imxhc3RuYW1lIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xd;
+U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVW&#xd;
+YWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEi&#xd;
+IHhzaTp0eXBlPSJ4czpzdHJpbmciPkphZGhhdjwvc2FtbDpBdHRyaWJ1dGVWYWx1&#xd;
+ZT48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJSb2xlIiBO&#xd;
+YW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUt&#xd;
+Zm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4c2k6bmlsPSJ0cnVl&#xd;
+Ii8+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iU1RPUkVf&#xd;
+Q09ERSIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0&#xd;
+dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeHNpOm5p&#xd;
+bD0idHJ1ZSIvPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9&#xd;
+IkJQSUQiIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDph&#xd;
+dHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhzaTpu&#xd;
+aWw9InRydWUiLz48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1l&#xd;
+PSJuYW1lIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xd;
+YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSB4c2k6&#xd;
+bmlsPSJ0cnVlIi8+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFt&#xd;
+ZT0iZGVzaWduYXRpb24iIE5hbWVGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpT&#xd;
+QU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMiPjxzYW1sOkF0dHJpYnV0ZVZh&#xd;
+bHVlIHhzaTpuaWw9InRydWUiLz48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJp&#xd;
+YnV0ZSBOYW1lPSJFbXBsb3llZUlEIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFt&#xd;
+ZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2FtbDpBdHRy&#xd;
+aWJ1dGVWYWx1ZSB4c2k6bmlsPSJ0cnVlIi8+PC9zYW1sOkF0dHJpYnV0ZT48c2Ft&#xd;
+bDpBdHRyaWJ1dGUgTmFtZT0iVVNFUl9ST0xFIiBOYW1lRm9ybWF0PSJ1cm46b2Fz&#xd;
+aXM6bmFtZXM6dGM6U0FNTDoyLjA6YXR0cm5hbWUtZm9ybWF0OmJhc2ljIj48c2Ft&#xd;
+bDpBdHRyaWJ1dGVWYWx1ZSB4c2k6bmlsPSJ0cnVlIi8+PC9zYW1sOkF0dHJpYnV0&#xd;
+ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iQWdlbnQgSWQiIE5hbWVGb3JtYXQ9InVy&#xd;
+bjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphdHRybmFtZS1mb3JtYXQ6YmFzaWMi&#xd;
+PjxzYW1sOkF0dHJpYnV0ZVZhbHVlIHhzaTpuaWw9InRydWUiLz48L3NhbWw6QXR0&#xd;
+cmlidXRlPjwvc2FtbDpBdHRyaWJ1dGVTdGF0ZW1lbnQ+PC9zYW1sOkFzc2VydGlv&#xd;
+bj48L3NhbWxwOlJlc3BvbnNlPg==&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">saml/SSO</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">1898</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/nhqdashboard" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">nhqdashboard</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">5261</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+              <collectionProp name="AuthManager.auth_list">
+                <elementProp name="" elementType="Authorization">
+                  <stringProp name="Authorization.url">https://pcrepllica.jiolabs.com/pcdxp/web/partner-central</stringProp>
+                  <stringProp name="Authorization.username">rachana.jadhav</stringProp>
+                  <stringProp name="Authorization.password">Rachu@291003</stringProp>
+                  <stringProp name="Authorization.domain"></stringProp>
+                  <stringProp name="Authorization.realm"></stringProp>
+                </elementProp>
+              </collectionProp>
+              <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+            </AuthManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/conn/nhqConnDashboard" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">conn/nhqConnDashboard</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">3772</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/device/nhqSIMRechargeDashboard" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">device/nhqSIMRechargeDashboard</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">4236</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/icm/nhqIcmConnDashboard" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">icm/nhqIcmConnDashboard</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">4240</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/icm/nhqIcmRechargeDashboard" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">icm/nhqIcmRechargeDashboard</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">4323</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/icm/nhqIcmDevicePayout" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">icm/nhqIcmDevicePayout</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">3316</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://pcanalytics.jiolabs.com/earning/nhqEarningsDashboard" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">earning/nhqEarningsDashboard</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">3676</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
